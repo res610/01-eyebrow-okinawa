@@ -10,23 +10,39 @@ export default function Home() {
       <main className="min-h-screen">
         {/* Hero Section - モバイルファースト */}
         <section className="bg-gradient-to-b from-gray-50 to-white py-12 md:py-20">
-          <div className="max-w-7xl mx-auto px-4 text-center">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight">
-              EYEBROW STYLING<br />FOR MEN OKINAWA
-            </h1>
-            <p className="text-2xl sm:text-3xl mb-3 md:mb-4 font-bold">01（O-ONE）</p>
-            <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 md:mb-8 px-2">
-              沖縄県那覇市おもろまちのメンズ専門眉毛ワックスサロン
-            </p>
-            {/* モバイルで最低44pxのタップ領域を確保 */}
-            <a
-              href="https://tol-app.jp/s/ah63epbbc2ejsctgvpzm"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-gray-900 text-white px-6 py-3 md:px-8 md:py-4 rounded-lg text-base md:text-lg hover:bg-gray-800 transition-colors min-h-[44px] w-full sm:w-auto text-center"
-            >
-              ご予約はこちら
-            </a>
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12">
+              {/* マスコットキャラクター */}
+              <div className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 flex-shrink-0">
+                <Image
+                  src="/01-eyebrow-okinawa/images/mascot.png"
+                  alt="01（O-ONE）マスコット"
+                  width={192}
+                  height={192}
+                  className="w-full h-full object-contain"
+                />
+              </div>
+
+              {/* テキストコンテンツ */}
+              <div className="text-center md:text-left">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight">
+                  EYEBROW STYLING<br />FOR MEN OKINAWA
+                </h1>
+                <p className="text-2xl sm:text-3xl mb-3 md:mb-4 font-bold">01（O-ONE）</p>
+                <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 md:mb-8 px-2 md:px-0">
+                  沖縄県那覇市おもろまちのメンズ専門眉毛ワックスサロン
+                </p>
+                {/* モバイルで最低44pxのタップ領域を確保 */}
+                <a
+                  href="https://tol-app.jp/s/ah63epbbc2ejsctgvpzm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-gray-900 text-white px-6 py-3 md:px-8 md:py-4 rounded-lg text-base md:text-lg hover:bg-gray-800 transition-colors min-h-[44px] w-full sm:w-auto text-center"
+                >
+                  ご予約はこちら
+                </a>
+              </div>
+            </div>
           </div>
         </section>
 
