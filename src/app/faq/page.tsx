@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'よくあるご質問 | EYEBROW STYLING FOR MEN OKINAWA',
-  description: '01（OONE）のよくあるご質問。施術内容や予約方法など、お客様からよくいただく質問にお答えします。',
+  description: '01（O-ONE）のよくあるご質問。施術内容や予約方法など、お客様からよくいただく質問にお答えします。',
 };
 
 export default function FaqPage() {

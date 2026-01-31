@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: '料金表 | EYEBROW STYLING FOR MEN OKINAWA',
-  description: '01（OONE）の料金表ページ。眉毛ワックス施術の詳細な料金をご案内します。',
+  description: '01（O-ONE）の料金表ページ。眉毛ワックス施術の詳細な料金をご案内します。',
 };
 
 export default function PricingPage() {

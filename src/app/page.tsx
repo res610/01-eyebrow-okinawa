@@ -13,7 +13,7 @@ export default function Home() {
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               EYEBROW STYLING<br />FOR MEN OKINAWA
             </h1>
-            <p className="text-3xl mb-4 font-bold">01（OONE）</p>
+            <p className="text-3xl mb-4 font-bold">01（O-ONE）</p>
             <p className="text-xl text-gray-600 mb-8">
               沖縄県那覇市おもろまちのメンズ専門眉毛ワックスサロン
             </p>
