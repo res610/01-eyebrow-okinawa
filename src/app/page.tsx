@@ -87,7 +87,7 @@ export default function Home() {
               {/* Googleマップ */}
               <div className="rounded-lg overflow-hidden shadow-lg">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3578.7755644962625!2d127.6879!3d26.2309!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e569e5a0d0a9e9%3A0x5c5c5c5c5c5c5c5c!2z44CSOTAwLTAwMDYg5rKW57iE55yM6YKj6KaH5biC44GK44KC44KN44G-44Gh77yU5LiB55uu77yW4oiS77yR77yZIOODleODrOODg-OCr-OCueOBiuOCguOCjeOBvuOBoeO2oTA!5e0!3m2!1sja!2sjp!4v1234567890123!5m2!1sja!2sjp"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57259.60890391461!2d127.65311287910155!3d26.230915100000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e569e1c84de5e5%3A0x8c8e1e1e1e1e1e1e!2z44CSOTAwLTAwMDYg5rKW57iE55yM6YKj6KaH5biC44GK44KC44KN44G-44Gh77yU5LiB55uu77yW4oiS77yR77yZIOODleODrOODg-OCr-OCueOBiuOCguOCjeOBvuOBoeOAgTQwMQ!5e0!3m2!1sja!2sjp!4v1706774400000!5m2!1sja!2sjp"
                   width="100%"
                   height="300"
                   style={{ border: 0 }}
@@ -104,7 +104,7 @@ export default function Home() {
                     フレックスおもろまち401
                   </p>
                   <a
-                    href="https://www.google.com/maps/search/?api=1&query=沖縄県那覇市おもろまち4-6-19+フレックスおもろまち401"
+                    href="https://maps.app.goo.gl/q8astkDzWxpiktEX6"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block mt-4 bg-white text-gray-900 px-4 py-2 rounded text-sm font-bold hover:bg-gray-100 transition-colors min-h-[44px] flex items-center justify-center"
