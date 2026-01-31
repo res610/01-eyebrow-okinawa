@@ -36,3 +36,6 @@ next-env.d.ts
 
 # assets for file sharing (excluded from git)
 /_assets/
+
+# claude code settings
+/.claude/
