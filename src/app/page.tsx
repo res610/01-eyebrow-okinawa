@@ -103,7 +103,7 @@ export default function Home() {
               {/* Googleマップ */}
               <div className="rounded-lg overflow-hidden shadow-lg">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d229038.4356175784!2d127.56311287910155!3d26.230915100000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e569e1c84de5e5%3A0x8c8e1e1e1e1e1e1e!2z44CSOTAwLTAwMDYg5rKW57iE55yM6YKj6KaH5biC44GK44KC44KN44G-44Gh77yU5LiB55uu77yW4oiS77yR77yZIOODleODrOODg-OCr-OCueOBiuOCguOCjeOBvuOBoeOAgTQwMQ!5e0!3m2!1sja!2sjp!4v1706774400000!5m2!1sja!2sjp"
+                  src="https://www.google.com/maps?q=26.2271985,127.6961874&output=embed&z=15"
                   width="100%"
                   height="300"
                   style={{ border: 0 }}
