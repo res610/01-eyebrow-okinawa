@@ -24,7 +24,7 @@ export default function PricingPage() {
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 w-20 h-20 md:w-24 md:h-24">
                     <Image
-                      src="/images/menu-icon.png"
+                      src="/01-eyebrow-okinawa/images/menu-icon.png"
                       alt="メニューアイコン"
                       width={96}
                       height={96}
@@ -52,7 +52,7 @@ export default function PricingPage() {
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 w-20 h-20 md:w-24 md:h-24">
                     <Image
-                      src="/images/menu-icon.png"
+                      src="/01-eyebrow-okinawa/images/menu-icon.png"
                       alt="メニューアイコン"
                       width={96}
                       height={96}
@@ -79,7 +79,7 @@ export default function PricingPage() {
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 w-20 h-20 md:w-24 md:h-24">
                     <Image
-                      src="/images/menu-icon.png"
+                      src="/01-eyebrow-okinawa/images/menu-icon.png"
                       alt="メニューアイコン"
                       width={96}
                       height={96}
@@ -104,7 +104,7 @@ export default function PricingPage() {
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 w-20 h-20 md:w-24 md:h-24">
                     <Image
-                      src="/images/menu-icon.png"
+                      src="/01-eyebrow-okinawa/images/menu-icon.png"
                       alt="メニューアイコン"
                       width={96}
                       height={96}
