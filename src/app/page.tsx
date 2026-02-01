@@ -241,19 +241,19 @@ export default function Home() {
       </main>
       <Footer />
 
-      {/* フッター固定予約ボタン（メインページ専用） */}
+      {/* フッター固定LINEボタン（メインページ専用） */}
       <a
-        href="https://tol-app.jp/s/ah63epbbc2ejsctgvpzm"
+        href="https://lin.ee/JfpRgB1"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-4 md:right-6 z-50 transition-all hover:opacity-80 hover:scale-105"
       >
         <Image
-          src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/reservation-button.webp`}
-          alt="予約する - マスコットキャラクター"
-          width={120}
-          height={120}
-          className="w-20 h-20 md:w-28 md:h-28 rounded-2xl shadow-lg border-2 border-blue-800"
+          src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/line-button.webp`}
+          alt="LINEで問い合わせ"
+          width={180}
+          height={180}
+          className="w-20 h-20 md:w-28 md:h-28"
         />
       </a>
     </>
