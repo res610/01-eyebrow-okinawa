@@ -13,7 +13,7 @@ export default function Header() {
         <div className="flex justify-between items-center">
           <Link href="/" className="flex items-center">
             <Image
-              src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/title.png`}
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/title.webp`}
               alt="01（O-ONE）"
               width={200}
               height={50}

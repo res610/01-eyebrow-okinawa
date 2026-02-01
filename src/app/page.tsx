@@ -1,5 +1,6 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import CustomerVoices from '@/components/CustomerVoices';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -15,7 +16,7 @@ export default function Home() {
               {/* マスコットキャラクター */}
               <div className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 flex-shrink-0">
                 <Image
-                  src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/mascot.png`}
+                  src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/mascot.webp`}
                   alt="01（O-ONE）マスコット"
                   width={192}
                   height={192}
@@ -71,32 +72,52 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Features Section */}
+        {/* 3つのこだわり Section */}
         <section className="py-12 md:py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4">
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">当サロンの特徴</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">3つのこだわり</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-              <div className="text-center p-6 bg-white rounded-lg">
-                <div className="text-4xl mb-4">👨</div>
-                <h3 className="text-lg md:text-xl font-bold mb-2">メンズ専門</h3>
-                <p className="text-sm md:text-base text-gray-600">男性専門の眉毛ワックスサロン</p>
+              {/* サービス */}
+              <div className="bg-white rounded-lg p-6 md:p-8">
+                <div className="text-center mb-4">
+                  <div className="text-4xl mb-3">✂️</div>
+                  <h3 className="text-lg md:text-xl font-bold">サービス</h3>
+                </div>
+                <p className="text-sm md:text-base text-gray-700 leading-relaxed">
+                  お客様一人ひとりの骨格・目の形・お顔全体のバランスを丁寧に見極め、最も似合う眉をご提案いたします。「なりたい印象」と「似合う形」の両方を大切に、オーダーメイドの眉デザインをお届けします。
+                </p>
               </div>
-              <div className="text-center p-6 bg-white rounded-lg">
-                <div className="text-4xl mb-4">✨</div>
-                <h3 className="text-lg md:text-xl font-bold mb-2">ワックス脱毛</h3>
-                <p className="text-sm md:text-base text-gray-600">プロの技術で美しい眉に</p>
+
+              {/* サポート */}
+              <div className="bg-white rounded-lg p-6 md:p-8">
+                <div className="text-center mb-4">
+                  <div className="text-4xl mb-3">💬</div>
+                  <h3 className="text-lg md:text-xl font-bold">サポート</h3>
+                </div>
+                <p className="text-sm md:text-base text-gray-700 leading-relaxed">
+                  施術後のアフターケアのアドバイスはもちろん、LINEでのご相談も随時受け付けております。次回来店までの眉のお手入れ方法もお伝えし、リピーターのお客様にも安心して通っていただける環境を整えています。
+                </p>
               </div>
-              <div className="text-center p-6 bg-white rounded-lg">
-                <div className="text-4xl mb-4">📍</div>
-                <h3 className="text-lg md:text-xl font-bold mb-2">好立地</h3>
-                <p className="text-sm md:text-base text-gray-600">那覇市おもろまち</p>
+
+              {/* 施術空間 */}
+              <div className="bg-white rounded-lg p-6 md:p-8">
+                <div className="text-center mb-4">
+                  <div className="text-4xl mb-3">🏠</div>
+                  <h3 className="text-lg md:text-xl font-bold">施術空間</h3>
+                </div>
+                <p className="text-sm md:text-base text-gray-700 leading-relaxed">
+                  清潔感があり、リラックスできるシェアサロン内で施術を行っております。初めての方でも緊張せずに過ごしていただけるよう、親しみやすい雰囲気づくりを大切にしています。
+                </p>
               </div>
             </div>
           </div>
         </section>
 
+        {/* お客様の声 Section */}
+        <CustomerVoices />
+
         {/* Access Section - Googleマップと店舗外観 */}
-        <section className="py-12 md:py-16 bg-white">
+        <section className="py-12 md:py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4">
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">アクセス</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
@@ -133,7 +154,7 @@ export default function Home() {
               {/* 店舗外観写真 */}
               <div className="rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/exterior.jpg`}
+                  src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/exterior.webp`}
                   alt="01（O-ONE）店舗外観"
                   width={600}
                   height={400}
@@ -146,6 +167,30 @@ export default function Home() {
                     シェアサロン内で営業しております
                   </p>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* キャンセルポリシー Section */}
+        <section className="py-12 md:py-16 bg-white">
+          <div className="max-w-4xl mx-auto px-4">
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">キャンセルポリシー</h2>
+            <div className="bg-white rounded-lg shadow-md p-6 md:p-8">
+              <div className="text-sm md:text-base text-gray-700 leading-relaxed space-y-4">
+                <p>
+                  当サロンは完全予約制のため、<br />
+                  一人ひとりのお時間を大切にし、施術枠を確保しております。
+                </p>
+                <p>
+                  ご予約のキャンセル・変更は、必ず前日までにご連絡をお願いいたします。<br />
+                  無断キャンセル、または当日キャンセルがあった場合は、<br />
+                  今後のご予約をお断りさせていただく場合がございます。
+                </p>
+                <p>
+                  すべてのお客様に気持ちよくご利用いただくため、<br />
+                  何卒ご理解とご協力をお願いいたします。
+                </p>
               </div>
             </div>
           </div>
@@ -204,7 +249,7 @@ export default function Home() {
         className="fixed bottom-6 right-4 md:right-6 z-50 transition-all hover:opacity-80 hover:scale-105"
       >
         <Image
-          src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/reservation-button.png`}
+          src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/reservation-button.webp`}
           alt="予約する - マスコットキャラクター"
           width={120}
           height={120}
