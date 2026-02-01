@@ -15,7 +15,7 @@ export default function Home() {
               {/* マスコットキャラクター */}
               <div className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 flex-shrink-0">
                 <Image
-                  src="/01-eyebrow-okinawa/images/mascot.png"
+                  src="/images/mascot.png"
                   alt="01（O-ONE）マスコット"
                   width={192}
                   height={192}
@@ -133,7 +133,7 @@ export default function Home() {
               {/* 店舗外観写真 */}
               <div className="rounded-lg overflow-hidden shadow-lg">
                 <Image
-                  src="/01-eyebrow-okinawa/images/exterior.jpg"
+                  src="/images/exterior.jpg"
                   alt="01（O-ONE）店舗外観"
                   width={600}
                   height={400}
@@ -195,6 +195,22 @@ export default function Home() {
         </section>
       </main>
       <Footer />
+
+      {/* フッター固定予約ボタン（メインページ専用） */}
+      <a
+        href="https://tol-app.jp/s/ah63epbbc2ejsctgvpzm"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-4 md:right-6 z-50 transition-all hover:opacity-80 hover:scale-105"
+      >
+        <Image
+          src="/images/reservation-button.png"
+          alt="予約する - マスコットキャラクター"
+          width={120}
+          height={120}
+          className="w-20 h-20 md:w-28 md:h-28 rounded-2xl shadow-lg border-2 border-blue-800"
+        />
+      </a>
     </>
   );
 }
