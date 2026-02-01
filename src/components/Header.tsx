@@ -39,6 +39,11 @@ export default function Header() {
                 FAQ
               </Link>
             </li>
+            <li>
+              <Link href="/terms" className="hover:text-gray-600 transition-colors text-base">
+                利用規約
+              </Link>
+            </li>
           </ul>
 
           {/* Mobile Menu Button */}
@@ -101,6 +106,15 @@ export default function Header() {
                   onClick={() => setIsMenuOpen(false)}
                 >
                   FAQ
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/terms"
+                  className="block py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors text-base"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  利用規約
                 </Link>
               </li>
             </ul>
