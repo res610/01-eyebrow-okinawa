@@ -64,12 +64,13 @@ export default function Home() {
                 この度は当店のWEBサイトをご覧いただきありがとうございます。
               </p>
               <p className="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
-                01（O-ONE）はメンズ専用のアイブロウサロンです。<br />
+                01（O-ONE）は、沖縄県那覇市おもろまちにあるメンズ専用のアイブロウサロンです。<br />
                 私はこのお店をオープンする前から、男性の眉毛をスタイリングしていました。<br />
-                ありがたいことに、その頃から、「Hitomiさんにやってもらいたい！」と言われることが増えたことをきっかけに、01（O-ONE）をオープンさせました。
+                ありがたいことに、その頃から、「Hitomiさんにやってもらいたい！」と言われることが増えたことをきっかけに、那覇に01（O-ONE）をオープンさせました。
               </p>
               <p className="text-sm md:text-base leading-relaxed text-gray-700">
                 昨今、男性もメイクをする時代。眉毛は整えるだけで印象が変わるものです。<br />
+                沖縄でもメンズ眉毛への関心が高まっており、眉毛ワックスや眉毛パーマで身だしなみを整える男性が増えています。<br />
                 当店では、お客様のお顔立ちを拝見させていただき、ベストな眉に仕上げてまいります。<br />
                 誰でも親しみやすい空間作りを心がけているので、ぜひお気軽にお越しください。
               </p>
@@ -94,19 +95,23 @@ export default function Home() {
                   <div className="absolute -top-4 -left-4 w-12 h-12 bg-gray-900 text-white rounded-full flex items-center justify-center text-xl font-bold z-10">
                     01
                   </div>
-                  <img
-                    src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/kodawari-private.webp`}
-                    alt="完全個室のプライベートサロン"
-                    className="w-full h-64 md:h-80 object-cover rounded-lg shadow-lg"
-                  />
+                  <div className="relative w-full h-64 md:h-80 rounded-lg shadow-lg overflow-hidden">
+                    <Image
+                      src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/kodawari-private.webp`}
+                      alt="沖縄・那覇のメンズ眉毛サロン01の完全個室プライベート空間"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                  </div>
                 </div>
                 <div className="md:pl-4">
                   <h3 className="text-xl md:text-2xl font-bold mb-4 border-b-2 border-gray-300 pb-2">
                     完全個室のプライベートサロン
                   </h3>
                   <div className="text-sm md:text-base text-gray-700 leading-relaxed space-y-3">
-                    <p>01（オーワン）は、完全個室のプライベートサロンです。<br />周りの目を気にすることなく、落ち着いた空間で施術を受けていただけます。</p>
-                    <p>初めてのアイブロウサロンで「人目が気になる」「緊張してしまう」<br />そんな方でも、リラックスしてお過ごしいただける環境をご用意しています。</p>
+                    <p>那覇おもろまちにある01（オーワン）は、完全個室のプライベートサロンです。<br />周りの目を気にすることなく、落ち着いた空間で眉毛ワックスや眉毛パーマの施術を受けていただけます。</p>
+                    <p>初めてのメンズ眉毛サロンで「人目が気になる」「緊張してしまう」<br />そんな方でも、リラックスしてお過ごしいただける環境をご用意しています。</p>
                     <p>眉を整えることで顔全体の印象が明るくなり、<br />清潔感のある自然な印象へとアップデートできます。</p>
                   </div>
                 </div>
@@ -118,11 +123,15 @@ export default function Home() {
                   <div className="absolute -top-4 -right-4 md:-left-4 md:right-auto w-12 h-12 bg-gray-900 text-white rounded-full flex items-center justify-center text-xl font-bold z-10">
                     02
                   </div>
-                  <img
-                    src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/kodawari-counseling.webp`}
-                    alt="丁寧なカウンセリング"
-                    className="w-full h-64 md:h-80 object-cover rounded-lg shadow-lg"
-                  />
+                  <div className="relative w-full h-64 md:h-80 rounded-lg shadow-lg overflow-hidden">
+                    <Image
+                      src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/kodawari-counseling.webp`}
+                      alt="那覇おもろまちの眉毛サロン01での丁寧なカウンセリング風景"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                  </div>
                 </div>
                 <div className="md:order-1 md:pr-4">
                   <h3 className="text-xl md:text-2xl font-bold mb-4 border-b-2 border-gray-300 pb-2">
@@ -130,7 +139,7 @@ export default function Home() {
                   </h3>
                   <div className="text-sm md:text-base text-gray-700 leading-relaxed space-y-3">
                     <p>顔の印象を大きく左右する眉毛。<br />骨格や筋肉のつき方は一人ひとり異なるため、似合う眉の形も人それぞれです。</p>
-                    <p>01（オーワン）では、丁寧なカウンセリングを通して、骨格や顔立ち、なりたい印象をしっかりとヒアリング。<br />お客様一人ひとりに合わせたオーダーメイドの眉デザインをご提案します。</p>
+                    <p>沖縄のメンズ眉毛サロン01（オーワン）では、丁寧なカウンセリングを通して、骨格や顔立ち、なりたい印象をしっかりとヒアリング。<br />お客様一人ひとりに合わせたオーダーメイドの眉デザインをご提案します。</p>
                     <p>自然で清潔感のある仕上がりはもちろん、<br />ご希望に応じてトレンドを取り入れたデザイン提案も可能です。</p>
                     <p>「自分に似合う眉が分からない」「印象を変えたい」<br />そんな方も、安心してご相談ください。</p>
                   </div>
@@ -143,11 +152,15 @@ export default function Home() {
                   <div className="absolute -top-4 -left-4 w-12 h-12 bg-gray-900 text-white rounded-full flex items-center justify-center text-xl font-bold z-10">
                     03
                   </div>
-                  <img
-                    src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/kodawari-grooming.webp`}
-                    alt="身だしなみを、さらに整える"
-                    className="w-full h-64 md:h-80 object-cover rounded-lg shadow-lg"
-                  />
+                  <div className="relative w-full h-64 md:h-80 rounded-lg shadow-lg overflow-hidden">
+                    <Image
+                      src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/kodawari-grooming.webp`}
+                      alt="眉毛ワックス・鼻毛ケアなどメンズ身だしなみメニュー"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                  </div>
                 </div>
                 <div className="md:pl-4">
                   <h3 className="text-xl md:text-2xl font-bold mb-4 border-b-2 border-gray-300 pb-2">
@@ -155,8 +168,8 @@ export default function Home() {
                   </h3>
                   <div className="text-sm md:text-base text-gray-700 leading-relaxed space-y-3">
                     <p>01（オーワン）では、眉毛パーマ・眉毛ワックスに加え、<br />身だしなみをトータルで整えられるオプションメニューをご用意しています。</p>
-                    <p>毛穴洗浄や各種ワックスケア、爪磨きなど、<br />顔まわりから指先まで、清潔感を高めたい方におすすめです。</p>
-                    <p>必要なものだけを、必要な分だけ。<br />眉毛施術と組み合わせることで、<br />より完成度の高い仕上がりを実感していただけます。</p>
+                    <p>鼻毛ワックスや毛穴洗浄、各種ワックスケア、爪磨きなど、<br />顔まわりから指先まで、清潔感を高めたい男性におすすめです。</p>
+                    <p>必要なものだけを、必要な分だけ。<br />眉毛施術と組み合わせることで、<br />より完成度の高い仕上がりを実感していただけます。<br />沖縄・那覇でメンズの身だしなみを整えるなら、ぜひ01にお任せください。</p>
                   </div>
                 </div>
               </div>
@@ -180,11 +193,15 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* 店舗外観 */}
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                <img
-                  src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/exterior.webp`}
-                  alt="店舗外観"
-                  className="w-full h-64 object-cover"
-                />
+                <div className="relative w-full h-64">
+                  <Image
+                    src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/exterior.webp`}
+                    alt="沖縄那覇おもろまちのメンズ眉毛サロン01の店舗外観"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                </div>
                 <div className="p-6">
                   <h3 className="text-xl md:text-2xl font-bold text-center mb-4 pb-2 border-b-2 border-gray-800">店舗外観</h3>
                   <div className="text-sm md:text-base text-gray-700 leading-relaxed space-y-3">
@@ -201,11 +218,15 @@ export default function Home() {
 
               {/* 施術スペース */}
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                <img
-                  src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/treatment-room.webp`}
-                  alt="施術スペース"
-                  className="w-full h-64 object-cover"
-                />
+                <div className="relative w-full h-64">
+                  <Image
+                    src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/treatment-room.webp`}
+                    alt="01の完全個室施術スペース・リクライニングチェア完備"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                </div>
                 <div className="p-6">
                   <h3 className="text-xl md:text-2xl font-bold text-center mb-4 pb-2 border-b-2 border-gray-800">施術スペース</h3>
                   <div className="text-sm md:text-base text-gray-700 leading-relaxed space-y-3">
@@ -240,11 +261,14 @@ export default function Home() {
                 className="w-full h-64 md:h-80"
               ></iframe>
               <div className="bg-gray-900 text-white p-4">
-                <p className="text-sm md:text-base font-bold mb-2">01（O-ONE）</p>
+                <p className="text-sm md:text-base font-bold mb-2">01（O-ONE）メンズ眉毛サロン</p>
                 <p className="text-xs md:text-sm text-gray-300 leading-relaxed">
                   〒900-0006<br />
                   沖縄県那覇市おもろまち4-6-19<br />
                   フレックスおもろまち401
+                </p>
+                <p className="text-xs md:text-sm text-gray-400 mt-2">
+                  おもろまち駅から徒歩圏内。那覇新都心エリアでメンズ眉毛ワックス・眉毛パーマをお探しの方はお気軽にご来店ください。
                 </p>
                 <a
                   href="https://maps.app.goo.gl/q8astkDzWxpiktEX6"
@@ -306,7 +330,7 @@ export default function Home() {
               </div>
 
               {/* 本文 */}
-              <div className="text-sm md:text-base text-gray-800 leading-relaxed space-y-4 text-center">
+              <div className="text-sm md:text-base text-gray-800 leading-relaxed space-y-4 max-w-lg mx-auto text-left">
                 <p>
                   当サロンは完全予約制のため、一人ひとりのお時間を大切にし、施術枠を確保しております。
                 </p>

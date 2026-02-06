@@ -1,5 +1,6 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import Image from 'next/image';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -28,11 +29,11 @@ export default function FaqPage() {
     },
     {
       question: '施術中の痛みはどれぐらいですか？',
-      answer: 'ワックス脱毛なので、抜く時の痛みを感じる方もいれば、眠ってしまうぐらい落ち着いている方もいらっしゃいます。また、眉毛ワックスは刺激があるので肌に赤みが出る場合がございます。その場合、人によっては2〜3日続くこともあります。力加減の調節も可能ですので、お気軽にお申し付けください。',
+      answer: 'ワックス脱毛なので、抜く時の痛みを感じる方もいれば、眠ってしまうぐらい落ち着いている方もいらっしゃいます。また、眉毛ワックスは刺激があるので肌に赤みが出る場合がございます。その場合、人によっては2〜3日続くこともあります。当サロンでは力加減の調節も可能ですので、お気軽にお申し付けください。',
     },
     {
       question: '施術時間はどれぐらいですか？',
-      answer: 'メニュー内容によりますが、基本的な眉毛ワックスで約60分、眉カットを含む場合は約90分程度、セットメニューの場合はそれ以上お時間がかかります。',
+      answer: 'メニュー内容によりますが、基本的な眉毛ワックスで約60分、眉毛パーマを含む場合は約90分程度、毛穴ケア付きのセットメニューの場合は約120〜150分ほどお時間をいただきます。',
     },
     {
       question: '施術は1回で終わりですか？',
@@ -62,18 +63,27 @@ export default function FaqPage() {
       <main className="min-h-screen bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 py-16">
           <div className="flex items-center justify-center gap-4 mb-12">
-            <img
+            <Image
               src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/mascot-flying-left.webp`}
               alt=""
+              width={80}
+              height={80}
               className="w-20 h-20 object-contain"
             />
-            <h1 className="text-4xl font-bold">よくあるご質問</h1>
-            <img
+            <h1 className="text-3xl md:text-4xl font-bold">よくあるご質問</h1>
+            <Image
               src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/mascot-flying-right.webp`}
               alt=""
+              width={80}
+              height={80}
               className="w-20 h-20 object-contain"
             />
           </div>
+
+          <p className="text-sm md:text-base text-gray-600 text-center mb-8 leading-relaxed">
+            沖縄・那覇のメンズ眉毛サロン01（O-ONE）に寄せられる、よくあるご質問をまとめました。<br className="hidden md:inline" />
+            眉毛ワックスや眉毛パーマの施術について、初めての方もぜひご参考ください。
+          </p>
 
           <div className="space-y-6">
             {faqs.map((faq, index) => (
@@ -99,7 +109,8 @@ export default function FaqPage() {
           <div className="mt-12 bg-white rounded-lg shadow-md p-8 text-center">
             <h2 className="text-2xl font-bold mb-4">その他ご質問がある場合</h2>
             <p className="text-gray-600 mb-6">
-              お気軽にお問い合わせください。
+              沖縄・那覇でメンズ眉毛サロンをお探しの方、施術内容や料金についてなど、<br className="hidden md:inline" />
+              お気軽にLINEからお問い合わせください。
             </p>
             <a
               href="https://lin.ee/JfpRgB1"

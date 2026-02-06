@@ -1,5 +1,6 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import Image from 'next/image';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -18,15 +19,19 @@ export default function TermsPage() {
       <main className="min-h-screen bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 py-12 md:py-16">
           <div className="flex items-center justify-center gap-4 mb-8 md:mb-12">
-            <img
+            <Image
               src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/mascot-arms-crossed.webp`}
               alt=""
+              width={80}
+              height={80}
               className="w-14 h-14 md:w-20 md:h-20 object-contain scale-x-[-1]"
             />
             <h1 className="text-3xl md:text-4xl font-bold">利用規約</h1>
-            <img
+            <Image
               src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/mascot-arms-crossed.webp`}
               alt=""
+              width={80}
+              height={80}
               className="w-14 h-14 md:w-20 md:h-20 object-contain"
             />
           </div>

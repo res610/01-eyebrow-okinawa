@@ -19,7 +19,11 @@ export default function PricingPage() {
       <Header />
       <main className="min-h-screen bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 py-12 md:py-16">
-          <h1 className="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12">料金表</h1>
+          <h1 className="text-3xl md:text-4xl font-bold text-center mb-4 md:mb-6">料金表・メニュー</h1>
+          <p className="text-sm md:text-base text-gray-600 text-center mb-8 md:mb-12 leading-relaxed">
+            沖縄・那覇のメンズ眉毛サロン01（O-ONE）の施術メニューと料金のご案内です。<br className="hidden md:inline" />
+            眉毛ワックス・眉毛パーマをはじめ、鼻毛ワックスや毛穴洗浄などのオプションメニューもご用意しています。
+          </p>
 
           {/* 基本メニュー */}
           <div className="bg-white rounded-lg shadow-md p-6 md:p-8 mb-8">
