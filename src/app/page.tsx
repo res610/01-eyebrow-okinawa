@@ -72,42 +72,88 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 3つのこだわり Section */}
+        {/* 01が選ばれる3つの理由 Section */}
         <section className="py-12 md:py-16 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4">
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">3つのこだわり</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-              {/* サービス */}
-              <div className="bg-white rounded-lg p-6 md:p-8">
-                <div className="text-center mb-4">
-                  <div className="text-4xl mb-3">✂️</div>
-                  <h3 className="text-lg md:text-xl font-bold">サービス</h3>
+          <div className="max-w-6xl mx-auto px-4">
+            {/* タイトル */}
+            <div className="text-center mb-10 md:mb-14">
+              <h2 className="text-2xl md:text-3xl font-bold tracking-widest mb-2">01が選ばれる3つの理由</h2>
+              <div className="w-48 h-0.5 bg-gray-800 mx-auto mb-2"></div>
+              <p className="text-sm tracking-widest text-gray-600">3 REASONS TO CHOOSE 01</p>
+            </div>
+
+            <div className="space-y-12 md:space-y-16">
+              {/* 1. 完全個室のプライベートサロン */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 items-center">
+                <div className="relative">
+                  <div className="absolute -top-4 -left-4 w-12 h-12 bg-gray-900 text-white rounded-full flex items-center justify-center text-xl font-bold z-10">
+                    01
+                  </div>
+                  <img
+                    src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/kodawari-private.webp`}
+                    alt="完全個室のプライベートサロン"
+                    className="w-full h-64 md:h-80 object-cover rounded-lg shadow-lg"
+                  />
                 </div>
-                <p className="text-sm md:text-base text-gray-700 leading-relaxed">
-                  お客様一人ひとりの骨格・目の形・お顔全体のバランスを丁寧に見極め、最も似合う眉をご提案いたします。「なりたい印象」と「似合う形」の両方を大切に、オーダーメイドの眉デザインをお届けします。
-                </p>
+                <div className="md:pl-4">
+                  <h3 className="text-xl md:text-2xl font-bold mb-4 border-b-2 border-gray-300 pb-2">
+                    完全個室のプライベートサロン
+                  </h3>
+                  <div className="text-sm md:text-base text-gray-700 leading-relaxed space-y-3">
+                    <p>01（オーワン）は、完全個室のプライベートサロンです。<br />周りの目を気にすることなく、落ち着いた空間で施術を受けていただけます。</p>
+                    <p>初めてのアイブロウサロンで「人目が気になる」「緊張してしまう」<br />そんな方でも、リラックスしてお過ごしいただける環境をご用意しています。</p>
+                    <p>眉を整えることで顔全体の印象が明るくなり、<br />清潔感のある自然な印象へとアップデートできます。</p>
+                  </div>
+                </div>
               </div>
 
-              {/* サポート */}
-              <div className="bg-white rounded-lg p-6 md:p-8">
-                <div className="text-center mb-4">
-                  <div className="text-4xl mb-3">💬</div>
-                  <h3 className="text-lg md:text-xl font-bold">サポート</h3>
+              {/* 2. 丁寧なカウンセリング */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 items-center">
+                <div className="relative md:order-2">
+                  <div className="absolute -top-4 -right-4 md:-left-4 md:right-auto w-12 h-12 bg-gray-900 text-white rounded-full flex items-center justify-center text-xl font-bold z-10">
+                    02
+                  </div>
+                  <img
+                    src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/kodawari-counseling.webp`}
+                    alt="丁寧なカウンセリング"
+                    className="w-full h-64 md:h-80 object-cover rounded-lg shadow-lg"
+                  />
                 </div>
-                <p className="text-sm md:text-base text-gray-700 leading-relaxed">
-                  施術後のアフターケアのアドバイスはもちろん、LINEでのご相談も随時受け付けております。次回来店までの眉のお手入れ方法もお伝えし、リピーターのお客様にも安心して通っていただける環境を整えています。
-                </p>
+                <div className="md:order-1 md:pr-4">
+                  <h3 className="text-xl md:text-2xl font-bold mb-4 border-b-2 border-gray-300 pb-2">
+                    丁寧なカウンセリング
+                  </h3>
+                  <div className="text-sm md:text-base text-gray-700 leading-relaxed space-y-3">
+                    <p>顔の印象を大きく左右する眉毛。<br />骨格や筋肉のつき方は一人ひとり異なるため、似合う眉の形も人それぞれです。</p>
+                    <p>01（オーワン）では、丁寧なカウンセリングを通して、骨格や顔立ち、なりたい印象をしっかりとヒアリング。<br />お客様一人ひとりに合わせたオーダーメイドの眉デザインをご提案します。</p>
+                    <p>自然で清潔感のある仕上がりはもちろん、<br />ご希望に応じてトレンドを取り入れたデザイン提案も可能です。</p>
+                    <p>「自分に似合う眉が分からない」「印象を変えたい」<br />そんな方も、安心してご相談ください。</p>
+                  </div>
+                </div>
               </div>
 
-              {/* 施術空間 */}
-              <div className="bg-white rounded-lg p-6 md:p-8">
-                <div className="text-center mb-4">
-                  <div className="text-4xl mb-3">🏠</div>
-                  <h3 className="text-lg md:text-xl font-bold">施術空間</h3>
+              {/* 3. 身だしなみを、さらに整える */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 items-center">
+                <div className="relative">
+                  <div className="absolute -top-4 -left-4 w-12 h-12 bg-gray-900 text-white rounded-full flex items-center justify-center text-xl font-bold z-10">
+                    03
+                  </div>
+                  <img
+                    src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/kodawari-grooming.webp`}
+                    alt="身だしなみを、さらに整える"
+                    className="w-full h-64 md:h-80 object-cover rounded-lg shadow-lg"
+                  />
                 </div>
-                <p className="text-sm md:text-base text-gray-700 leading-relaxed">
-                  清潔感があり、リラックスできるシェアサロン内で施術を行っております。初めての方でも緊張せずに過ごしていただけるよう、親しみやすい雰囲気づくりを大切にしています。
-                </p>
+                <div className="md:pl-4">
+                  <h3 className="text-xl md:text-2xl font-bold mb-4 border-b-2 border-gray-300 pb-2">
+                    身だしなみを、さらに整える
+                  </h3>
+                  <div className="text-sm md:text-base text-gray-700 leading-relaxed space-y-3">
+                    <p>01（オーワン）では、眉毛パーマ・眉毛ワックスに加え、<br />身だしなみをトータルで整えられるオプションメニューをご用意しています。</p>
+                    <p>毛穴洗浄や各種ワックスケア、爪磨きなど、<br />顔まわりから指先まで、清潔感を高めたい方におすすめです。</p>
+                    <p>必要なものだけを、必要な分だけ。<br />眉毛施術と組み合わせることで、<br />より完成度の高い仕上がりを実感していただけます。</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
