@@ -50,9 +50,14 @@ export default function Home() {
         {/* About Section - Hitomi紹介 */}
         <section className="py-12 md:py-16 bg-white">
           <div className="max-w-4xl mx-auto px-4">
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 md:mb-8">
-              眉で印象は大きく変わる<br className="md:hidden" />顔立ちからベストな眉をご提案
-            </h2>
+            {/* タイトル */}
+            <div className="text-center mb-10 md:mb-14">
+              <h2 className="text-2xl md:text-3xl font-bold tracking-widest mb-2">
+                眉で印象は大きく変わる<br className="md:hidden" />顔立ちからベストな眉をご提案
+              </h2>
+              <div className="w-48 h-0.5 bg-gray-800 mx-auto mb-2"></div>
+              <p className="text-sm tracking-widest text-gray-600">ABOUT</p>
+            </div>
             <div className="bg-gray-50 rounded-lg p-6 md:p-8">
               <p className="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
                 こんにちは。アイブロウリストHitomiです。<br />
@@ -197,7 +202,7 @@ export default function Home() {
               {/* 施術スペース */}
               <div className="bg-white rounded-lg shadow-md overflow-hidden">
                 <img
-                  src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/kodawari-private.webp`}
+                  src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/treatment-room.webp`}
                   alt="施術スペース"
                   className="w-full h-64 object-cover"
                 />
@@ -213,57 +218,42 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Access Section - Googleマップと店舗外観 */}
+        {/* Access Section - Googleマップ */}
         <section className="py-12 md:py-16 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4">
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">アクセス</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-              {/* Googleマップ */}
-              <div className="rounded-lg overflow-hidden shadow-lg">
-                <iframe
-                  src="https://www.google.com/maps?q=26.2271985,127.6961874&output=embed&z=15"
-                  width="100%"
-                  height="300"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  className="w-full h-64 md:h-80"
-                ></iframe>
-                <div className="bg-gray-900 text-white p-4">
-                  <p className="text-sm md:text-base font-bold mb-2">01（O-ONE）</p>
-                  <p className="text-xs md:text-sm text-gray-300 leading-relaxed">
-                    〒900-0006<br />
-                    沖縄県那覇市おもろまち4-6-19<br />
-                    フレックスおもろまち401
-                  </p>
-                  <a
-                    href="https://maps.app.goo.gl/q8astkDzWxpiktEX6"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block mt-4 bg-white text-gray-900 px-4 py-2 rounded text-sm font-bold hover:bg-gray-100 transition-colors min-h-[44px] flex items-center justify-center"
-                  >
-                    Googleマップで開く
-                  </a>
-                </div>
-              </div>
-
-              {/* 店舗外観写真 */}
-              <div className="rounded-lg overflow-hidden shadow-lg">
-                <Image
-                  src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/exterior.webp`}
-                  alt="01（O-ONE）店舗外観"
-                  width={600}
-                  height={400}
-                  className="w-full h-64 md:h-80 object-cover"
-                />
-                <div className="bg-gray-900 text-white p-4">
-                  <p className="text-sm md:text-base font-bold mb-2">店舗外観</p>
-                  <p className="text-xs md:text-sm text-gray-300">
-                    フレックスおもろまち401<br />
-                    シェアサロン内で営業しております
-                  </p>
-                </div>
+          <div className="max-w-4xl mx-auto px-4">
+            {/* タイトル */}
+            <div className="text-center mb-10 md:mb-14">
+              <h2 className="text-2xl md:text-3xl font-bold tracking-widest mb-2">アクセス</h2>
+              <div className="w-48 h-0.5 bg-gray-800 mx-auto mb-2"></div>
+              <p className="text-sm tracking-widest text-gray-600">ACCESS</p>
+            </div>
+            {/* Googleマップ */}
+            <div className="rounded-lg overflow-hidden shadow-lg">
+              <iframe
+                src="https://www.google.com/maps?q=26.2271985,127.6961874&output=embed&z=15"
+                width="100%"
+                height="300"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="w-full h-64 md:h-80"
+              ></iframe>
+              <div className="bg-gray-900 text-white p-4">
+                <p className="text-sm md:text-base font-bold mb-2">01（O-ONE）</p>
+                <p className="text-xs md:text-sm text-gray-300 leading-relaxed">
+                  〒900-0006<br />
+                  沖縄県那覇市おもろまち4-6-19<br />
+                  フレックスおもろまち401
+                </p>
+                <a
+                  href="https://maps.app.goo.gl/q8astkDzWxpiktEX6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block mt-4 bg-white text-gray-900 px-4 py-2 rounded text-sm font-bold hover:bg-gray-100 transition-colors min-h-[44px] flex items-center justify-center"
+                >
+                  Googleマップで開く
+                </a>
               </div>
             </div>
           </div>
@@ -335,7 +325,12 @@ export default function Home() {
         {/* CTA Section */}
         <section className="py-12 md:py-16 bg-gray-50">
           <div className="max-w-4xl mx-auto px-4 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">詳しい情報はこちら</h2>
+            {/* タイトル */}
+            <div className="text-center mb-10 md:mb-14">
+              <h2 className="text-2xl md:text-3xl font-bold tracking-widest mb-2">詳しい情報はこちら</h2>
+              <div className="w-48 h-0.5 bg-gray-800 mx-auto mb-2"></div>
+              <p className="text-sm tracking-widest text-gray-600">INFORMATION</p>
+            </div>
             <div className="flex flex-col md:flex-row gap-4 justify-center mb-8">
               <Link
                 href="/pricing"

@@ -52,7 +52,12 @@ export default function CustomerVoices() {
     <>
       <section className="py-12 md:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">お客様の声</h2>
+          {/* タイトル */}
+          <div className="text-center mb-10 md:mb-14">
+            <h2 className="text-2xl md:text-3xl font-bold tracking-widest mb-2">お客様の声</h2>
+            <div className="w-48 h-0.5 bg-gray-800 mx-auto mb-2"></div>
+            <p className="text-sm tracking-widest text-gray-600">CUSTOMER VOICE</p>
+          </div>
 
           {/* スライドショー */}
           <div className="relative">
