@@ -3,8 +3,13 @@ import Footer from '@/components/Footer';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'よくあるご質問 | EYEBROW STYLING FOR MEN OKINAWA',
-  description: '01（O-ONE）のよくあるご質問。施術内容や予約方法など、お客様からよくいただく質問にお答えします。',
+  title: 'よくあるご質問',
+  description: '沖縄・那覇のメンズ眉毛サロン01（O-ONE）のよくあるご質問。眉毛ワックスの痛み、施術時間、来店頻度など、メンズ眉毛施術に関するQ&Aをご紹介。',
+  keywords: ['眉毛ワックス 痛み', 'メンズ眉毛 施術時間', '眉毛サロン 頻度', '眉毛 Q&A'],
+  openGraph: {
+    title: 'よくあるご質問 | 01（O-ONE）沖縄メンズ眉毛サロン',
+    description: '沖縄・那覇のメンズ眉毛サロン01（O-ONE）のよくあるご質問。眉毛ワックスに関するQ&Aをご紹介。',
+  },
 };
 
 export default function FaqPage() {

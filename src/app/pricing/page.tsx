@@ -4,8 +4,13 @@ import Image from 'next/image';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: '料金表 | EYEBROW STYLING FOR MEN OKINAWA',
-  description: '01（O-ONE）の料金表ページ。眉毛ワックス施術の詳細な料金をご案内します。',
+  title: '料金表・メニュー',
+  description: '沖縄・那覇のメンズ眉毛サロン01（O-ONE）の料金表。眉毛ワックス・眉毛パーマ・鼻毛ワックスなど、メンズ向け眉毛メニューの料金をご案内。完全個室のプライベート空間で施術。',
+  keywords: ['眉毛ワックス 料金 沖縄', 'メンズ眉毛 料金 那覇', '眉毛パーマ 料金', '眉毛サロン 料金表'],
+  openGraph: {
+    title: '料金表・メニュー | 01（O-ONE）沖縄メンズ眉毛サロン',
+    description: '沖縄・那覇のメンズ眉毛サロン01（O-ONE）の料金表。眉毛ワックス・眉毛パーマの料金をご案内。',
+  },
 };
 
 export default function PricingPage() {

@@ -3,8 +3,12 @@ import Footer from '@/components/Footer';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: '利用規約 | EYEBROW STYLING FOR MEN OKINAWA',
-  description: '01（O-ONE）の利用規約ページ。サービスのご利用条件をご案内します。',
+  title: '利用規約',
+  description: '沖縄・那覇のメンズ眉毛サロン01（O-ONE）の利用規約。サービスのご利用条件、キャンセルポリシー、個人情報の取り扱いについてご案内します。',
+  robots: {
+    index: false,
+    follow: true,
+  },
 };
 
 export default function TermsPage() {
