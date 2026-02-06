@@ -13,7 +13,19 @@ export default function TermsPage() {
       <Header />
       <main className="min-h-screen bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 py-12 md:py-16">
-          <h1 className="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12">利用規約</h1>
+          <div className="flex items-center justify-center gap-4 mb-8 md:mb-12">
+            <img
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/mascot-arms-crossed.webp`}
+              alt=""
+              className="w-14 h-14 md:w-20 md:h-20 object-contain scale-x-[-1]"
+            />
+            <h1 className="text-3xl md:text-4xl font-bold">利用規約</h1>
+            <img
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/mascot-arms-crossed.webp`}
+              alt=""
+              className="w-14 h-14 md:w-20 md:h-20 object-contain"
+            />
+          </div>
 
           <div className="bg-white rounded-lg shadow-md p-6 md:p-8">
             <div className="text-sm md:text-base text-gray-700 leading-relaxed space-y-8">

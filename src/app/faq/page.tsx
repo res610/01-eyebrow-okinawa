@@ -56,7 +56,19 @@ export default function FaqPage() {
       <Header />
       <main className="min-h-screen bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-center mb-12">よくあるご質問</h1>
+          <div className="flex items-center justify-center gap-4 mb-12">
+            <img
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/mascot-flying-left.webp`}
+              alt=""
+              className="w-20 h-20 object-contain"
+            />
+            <h1 className="text-4xl font-bold">よくあるご質問</h1>
+            <img
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/mascot-flying-right.webp`}
+              alt=""
+              className="w-20 h-20 object-contain"
+            />
+          </div>
 
           <div className="space-y-6">
             {faqs.map((faq, index) => (
