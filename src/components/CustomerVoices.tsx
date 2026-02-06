@@ -91,6 +91,7 @@ export default function CustomerVoices() {
                     width={224}
                     height={288}
                     className="w-full h-full object-contain"
+                    loading={index < 4 ? 'eager' : 'lazy'}
                   />
                 </button>
               ))}

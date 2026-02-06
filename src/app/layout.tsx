@@ -150,6 +150,9 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <head>
+        <link rel="dns-prefetch" href="https://www.google.com" />
+        <link rel="dns-prefetch" href="https://maps.google.com" />
+        <link rel="preconnect" href="https://www.google.com" crossOrigin="anonymous" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

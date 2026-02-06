@@ -1,6 +1,7 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import CustomerVoices from '@/components/CustomerVoices';
+import LazyGoogleMap from '@/components/LazyGoogleMap';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -16,11 +17,12 @@ export default function Home() {
               {/* マスコットキャラクター */}
               <div className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 flex-shrink-0">
                 <Image
-                  src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/mascot.webp`}
-                  alt="01（O-ONE）マスコット"
+                  src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/menu-icon.webp`}
+                  alt="01（O-ONE）メンズ眉毛サロン"
                   width={192}
                   height={192}
                   className="w-full h-full object-contain"
+                  priority
                 />
               </div>
 
@@ -250,16 +252,7 @@ export default function Home() {
             </div>
             {/* Googleマップ */}
             <div className="rounded-lg overflow-hidden shadow-lg">
-              <iframe
-                src="https://www.google.com/maps?q=26.2271985,127.6961874&output=embed&z=15"
-                width="100%"
-                height="300"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="w-full h-64 md:h-80"
-              ></iframe>
+              <LazyGoogleMap />
               <div className="bg-gray-900 text-white p-4">
                 <p className="text-sm md:text-base font-bold mb-2">01（O-ONE）メンズ眉毛サロン</p>
                 <p className="text-xs md:text-sm text-gray-300 leading-relaxed">
