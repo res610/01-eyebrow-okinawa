@@ -289,7 +289,7 @@ export default function Home() {
             {/* PC版 */}
             <div className="hidden md:block">
               <Image
-                src="/images/cancel-policy-pc-1728x900.webp"
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/cancel-policy-pc-1728x900.webp`}
                 alt="ご予約についてのお願い：当サロンは完全予約制です。キャンセル・変更は前日までにご連絡ください。無断キャンセル・当日キャンセルの場合、今後のご予約をお断りする場合がございます。"
                 width={864}
                 height={450}
@@ -299,7 +299,7 @@ export default function Home() {
             {/* SP版 */}
             <div className="md:hidden">
               <Image
-                src="/images/cancel-policy-sp-686x1000.webp"
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/cancel-policy-sp-686x1000.webp`}
                 alt="ご予約についてのお願い：当サロンは完全予約制です。キャンセル・変更は前日までにご連絡ください。無断キャンセル・当日キャンセルの場合、今後のご予約をお断りする場合がございます。"
                 width={343}
                 height={500}
