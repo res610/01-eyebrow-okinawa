@@ -90,21 +90,34 @@ export default function Home() {
                             <p className="text-sm tracking-widest text-gray-600">ABOUT</p>
                         </div>
                         <div className="bg-gray-50 rounded-lg p-6 md:p-8">
-                            <p className="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
-                                こんにちは。アイブロウリストHitomiです。<br />
-                                この度は当店のWEBサイトをご覧いただきありがとうございます。
-                            </p>
-                            <p className="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
-                                01（O-ONE）は、沖縄県那覇市おもろまちにあるメンズ専用のアイブロウサロンです。<br />
-                                私はこのお店をオープンする前から、男性の眉毛をスタイリングしていました。<br />
-                                ありがたいことに、その頃から、「Hitomiさんにやってもらいたい！」と言われることが増えたことをきっかけに、那覇に01（O-ONE）をオープンさせました。
-                            </p>
-                            <p className="text-sm md:text-base leading-relaxed text-gray-700">
-                                昨今、男性もメイクをする時代。眉毛は整えるだけで印象が変わるものです。<br />
-                                沖縄でもメンズ眉毛への関心が高まっており、眉毛ワックスや眉毛パーマで身だしなみを整える男性が増えています。<br />
-                                当店では、お客様のお顔立ちを拝見させていただき、ベストな眉に仕上げてまいります。<br />
-                                誰でも親しみやすい空間作りを心がけているので、ぜひお気軽にお越しください。
-                            </p>
+                            <div className="flex flex-col md:flex-row md:gap-8">
+                                <div className="flex-1">
+                                    <p className="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
+                                        こんにちは。アイブロウリストHitomiです。<br />
+                                        この度は当店のWEBサイトをご覧いただきありがとうございます。
+                                    </p>
+                                    <p className="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
+                                        01（O-ONE）は、沖縄県那覇市おもろまちにあるメンズ専用のアイブロウサロンです。<br />
+                                        私はこのお店をオープンする前から、男性の眉毛をスタイリングしていました。<br />
+                                        ありがたいことに、その頃から、「Hitomiさんにやってもらいたい！」と言われることが増えたことをきっかけに、那覇に01（O-ONE）をオープンさせました。
+                                    </p>
+                                    <p className="text-sm md:text-base leading-relaxed text-gray-700">
+                                        昨今、男性もメイクをする時代。眉毛は整えるだけで印象が変わるものです。<br />
+                                        沖縄でもメンズ眉毛への関心が高まっており、眉毛ワックスや眉毛パーマで身だしなみを整える男性が増えています。<br />
+                                        当店では、お客様のお顔立ちを拝見させていただき、ベストな眉に仕上げてまいります。<br />
+                                        誰でも親しみやすい空間作りを心がけているので、ぜひお気軽にお越しください。
+                                    </p>
+                                </div>
+                                <div className="flex justify-center mt-6 md:mt-0 md:flex-shrink-0 md:self-center">
+                                    <Image
+                                        src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/mascot-arms-crossed.webp`}
+                                        alt="01サロンマスコットキャラクター"
+                                        width={120}
+                                        height={120}
+                                        className="w-24 h-24 md:w-32 md:h-32 object-contain"
+                                    />
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
