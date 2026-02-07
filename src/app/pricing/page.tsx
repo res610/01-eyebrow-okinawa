@@ -213,6 +213,7 @@ export default function PricingPage() {
                         <div className="text-center">
                             <p className="text-sm md:text-base text-gray-600">※価格は税込表示です</p>
                             <p className="text-sm md:text-base text-gray-600">※お支払い方法：現地支払い</p>
+                            <p className="text-sm md:text-base text-gray-600">※未成年（18歳未満）の方は保護者の同意が必要です</p>
                         </div>
                     </div>
                 </div>
