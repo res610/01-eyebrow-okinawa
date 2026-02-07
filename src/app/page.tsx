@@ -286,55 +286,25 @@ export default function Home() {
               <p className="text-sm tracking-widest text-gray-600">CANCELLATION POLICY</p>
             </div>
 
-            {/* 封蝋風の装飾 */}
-            <div className="flex justify-center -mb-6 relative z-10">
-              <div className="w-14 h-14 rounded-full bg-gradient-to-br from-red-800 via-red-900 to-red-950 shadow-lg flex items-center justify-center border-2 border-red-700">
-                <span className="text-amber-200 text-xl font-serif">01</span>
-              </div>
+            {/* PC版 */}
+            <div className="hidden md:block">
+              <Image
+                src="/images/cancel-policy-pc-1728x900.webp"
+                alt="ご予約についてのお願い：当サロンは完全予約制です。キャンセル・変更は前日までにご連絡ください。無断キャンセル・当日キャンセルの場合、今後のご予約をお断りする場合がございます。"
+                width={864}
+                height={450}
+                className="mx-auto"
+              />
             </div>
-
-            {/* メインコンテンツ - ペライチ風デザイン */}
-            <div className="relative border-4 border-double border-red-900 bg-amber-50 p-6 md:p-8 pt-10">
-              {/* 装飾的な飾り線（上） */}
-              <div className="flex items-center justify-center mb-6">
-                <div className="flex-1 h-px bg-gradient-to-r from-transparent via-amber-400 to-transparent"></div>
-                <div className="mx-4 flex items-center gap-1">
-                  <span className="text-amber-400 text-lg">❧</span>
-                  <span className="text-amber-600 text-xs">✦</span>
-                  <span className="text-amber-400 text-lg">❧</span>
-                </div>
-                <div className="flex-1 h-px bg-gradient-to-r from-transparent via-amber-400 to-transparent"></div>
-              </div>
-
-              {/* サブタイトル */}
-              <h3 className="text-xl md:text-2xl text-red-800 font-bold text-center mb-4" style={{ fontFamily: 'serif' }}>
-                ご予約についてのお願い
-              </h3>
-
-              {/* 装飾的な飾り線（下） */}
-              <div className="flex items-center justify-center mb-6">
-                <div className="flex-1 h-px bg-gradient-to-r from-transparent via-amber-400 to-transparent"></div>
-                <div className="mx-4 flex items-center gap-1">
-                  <span className="text-amber-400 text-lg">❧</span>
-                  <span className="text-amber-600 text-xs">✦</span>
-                  <span className="text-amber-400 text-lg">❧</span>
-                </div>
-                <div className="flex-1 h-px bg-gradient-to-r from-transparent via-amber-400 to-transparent"></div>
-              </div>
-
-              {/* 本文 */}
-              <div className="text-sm md:text-base text-gray-800 leading-relaxed space-y-4 max-w-lg mx-auto text-left">
-                <p>
-                  当サロンは完全予約制のため、一人ひとりのお時間を大切にし、施術枠を確保しております。
-                </p>
-                <p>
-                  ご予約のキャンセル・変更は、必ず前日までにご連絡をお願いいたします。<br />
-                  無断キャンセル、または当日キャンセルがあった場合は、今後のご予約をお断りさせていただく場合がございます。
-                </p>
-                <p>
-                  すべてのお客様に気持ちよくご利用いただくため、何卒ご理解とご協力をお願いいたします。
-                </p>
-              </div>
+            {/* SP版 */}
+            <div className="md:hidden">
+              <Image
+                src="/images/cancel-policy-sp-686x1000.webp"
+                alt="ご予約についてのお願い：当サロンは完全予約制です。キャンセル・変更は前日までにご連絡ください。無断キャンセル・当日キャンセルの場合、今後のご予約をお断りする場合がございます。"
+                width={343}
+                height={500}
+                className="mx-auto"
+              />
             </div>
           </div>
         </section>
