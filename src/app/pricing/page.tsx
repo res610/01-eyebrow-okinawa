@@ -1,6 +1,6 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import Image from 'next/image';
+import ImageModal from '@/components/ImageModal';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -31,15 +31,13 @@ export default function PricingPage() {
                         <div className="space-y-6">
                             <div className="border-b pb-6">
                                 <div className="flex items-start gap-4">
-                                    <div className="flex-shrink-0 w-20 h-20 md:w-24 md:h-24">
-                                        <Image
-                                            src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/menu-icon.webp`}
-                                            alt="メニューアイコン"
-                                            width={96}
-                                            height={96}
-                                            className="w-full h-full object-contain"
-                                        />
-                                    </div>
+                                    <ImageModal
+                                        src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/menu-wax-pore.webp`}
+                                        alt="眉毛ワックスと毛穴ケアの施術写真"
+                                        width={96}
+                                        height={96}
+                                        className="flex-shrink-0 w-20 h-20 md:w-24 md:h-24 rounded-lg overflow-hidden"
+                                    />
                                     <div className="flex-1">
                                         <div className="flex justify-between items-start mb-3">
                                             <h3 className="font-bold text-sm md:text-xl">
@@ -59,15 +57,13 @@ export default function PricingPage() {
 
                             <div className="border-b pb-6">
                                 <div className="flex items-start gap-4">
-                                    <div className="flex-shrink-0 w-20 h-20 md:w-24 md:h-24">
-                                        <Image
-                                            src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/menu-icon.webp`}
-                                            alt="メニューアイコン"
-                                            width={96}
-                                            height={96}
-                                            className="w-full h-full object-contain"
-                                        />
-                                    </div>
+                                    <ImageModal
+                                        src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/menu-perm-pore.webp`}
+                                        alt="眉毛パーマと毛穴ケアの施術写真"
+                                        width={96}
+                                        height={96}
+                                        className="flex-shrink-0 w-20 h-20 md:w-24 md:h-24 rounded-lg overflow-hidden"
+                                    />
                                     <div className="flex-1">
                                         <div className="flex justify-between items-start mb-3">
                                             <h3 className="font-bold text-sm md:text-xl">
@@ -86,15 +82,13 @@ export default function PricingPage() {
 
                             <div className="border-b pb-6">
                                 <div className="flex items-start gap-4">
-                                    <div className="flex-shrink-0 w-20 h-20 md:w-24 md:h-24">
-                                        <Image
-                                            src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/menu-icon.webp`}
-                                            alt="メニューアイコン"
-                                            width={96}
-                                            height={96}
-                                            className="w-full h-full object-contain"
-                                        />
-                                    </div>
+                                    <ImageModal
+                                        src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/menu-wax-design.webp`}
+                                        alt="眉毛ワックスデザインの施術写真"
+                                        width={96}
+                                        height={96}
+                                        className="flex-shrink-0 w-20 h-20 md:w-24 md:h-24 rounded-lg overflow-hidden"
+                                    />
                                     <div className="flex-1">
                                         <div className="flex justify-between items-start mb-3">
                                             <h3 className="font-bold text-sm md:text-xl">眉毛デザイン〈ワックス〉</h3>
@@ -111,15 +105,13 @@ export default function PricingPage() {
 
                             <div className="pb-2">
                                 <div className="flex items-start gap-4">
-                                    <div className="flex-shrink-0 w-20 h-20 md:w-24 md:h-24">
-                                        <Image
-                                            src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/menu-icon.webp`}
-                                            alt="メニューアイコン"
-                                            width={96}
-                                            height={96}
-                                            className="w-full h-full object-contain"
-                                        />
-                                    </div>
+                                    <ImageModal
+                                        src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/menu-perm-design.webp`}
+                                        alt="眉毛パーマデザインの施術写真"
+                                        width={96}
+                                        height={96}
+                                        className="flex-shrink-0 w-20 h-20 md:w-24 md:h-24 rounded-lg overflow-hidden"
+                                    />
                                     <div className="flex-1">
                                         <div className="flex justify-between items-start mb-3">
                                             <h3 className="font-bold text-sm md:text-xl">

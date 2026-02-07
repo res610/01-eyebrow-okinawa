@@ -2,6 +2,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import CustomerVoices from '@/components/CustomerVoices';
 import LazyGoogleMap from '@/components/LazyGoogleMap';
+import ImageModal from '@/components/ImageModal';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -45,6 +46,34 @@ export default function Home() {
                                     ご予約はこちら
                                 </a>
                             </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* 初回限定キャンペーン Section */}
+                <section className="py-10 md:py-14 bg-gray-900 text-white">
+                    <div className="max-w-md mx-auto px-4">
+                        <div className="text-center mb-6">
+                            <p className="text-sm tracking-widest text-gray-400 mb-2">TRIAL CAMPAIGN</p>
+                            <h2 className="text-2xl md:text-3xl font-bold">初回限定トライアル</h2>
+                        </div>
+                        <ImageModal
+                            src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/campaign-flyer.webp`}
+                            alt="01（O-ONE）初回限定トライアルキャンペーン：眉毛パーマ×毛穴洗浄 通常9,000円→初回8,000円、眉毛ワックス×毛穴洗浄 通常8,000円→初回7,000円。1,000円OFF"
+                            width={595}
+                            height={842}
+                            className="rounded-lg overflow-hidden shadow-lg block"
+                        />
+                        <div className="text-center mt-6">
+                            <a
+                                href="https://tol-app.jp/s/ah63epbbc2ejsctgvpzm"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-block bg-yellow-400 text-gray-900 px-8 py-3 md:py-4 rounded-lg text-base md:text-lg font-bold hover:bg-yellow-300 transition-colors min-h-[44px] w-full sm:w-auto text-center"
+                            >
+                                初回トライアルを予約する
+                            </a>
+                            <p className="text-xs text-gray-400 mt-3">※初めてご来店の方限定・毛穴ケア付きセットメニュー対象</p>
                         </div>
                     </div>
                 </section>
@@ -175,6 +204,52 @@ export default function Home() {
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* ビフォーアフター Section */}
+                <section className="py-12 md:py-16 bg-white">
+                    <div className="max-w-4xl mx-auto px-4">
+                        <div className="text-center mb-10 md:mb-14">
+                            <h2 className="text-2xl md:text-3xl font-bold tracking-widest mb-2">施術のビフォーアフター</h2>
+                            <div className="w-48 h-0.5 bg-gray-800 mx-auto mb-2"></div>
+                            <p className="text-sm tracking-widest text-gray-600">BEFORE &amp; AFTER</p>
+                        </div>
+                        <p className="text-sm md:text-base text-gray-600 text-center mb-8 leading-relaxed">
+                            沖縄・那覇のメンズ眉毛サロン01（O-ONE）での施術例をご紹介します。<br className="hidden md:inline" />
+                            眉毛ワックスや眉毛パーマで、お顔の印象がどのように変わるかご覧ください。
+                        </p>
+                        <div className="space-y-8">
+                            {/* 顔全体のビフォーアフター */}
+                            <div className="rounded-lg overflow-hidden shadow-lg">
+                                <Image
+                                    src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/before-after-face.webp`}
+                                    alt="沖縄メンズ眉毛サロン01での眉毛ワックス施術ビフォーアフター：施術前と施術後の顔全体の印象変化"
+                                    width={1200}
+                                    height={600}
+                                    className="w-full"
+                                />
+                                <div className="flex">
+                                    <div className="flex-1 bg-gray-100 py-2 text-center text-sm font-bold text-gray-600">BEFORE</div>
+                                    <div className="flex-1 bg-gray-900 py-2 text-center text-sm font-bold text-white">AFTER</div>
+                                </div>
+                            </div>
+                            {/* 眉クローズアップ */}
+                            <div className="max-w-sm mx-auto rounded-lg overflow-hidden shadow-lg">
+                                <Image
+                                    src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/before-after-eyebrow.webp`}
+                                    alt="眉毛のクローズアップ：施術前後の眉の形・毛流れの変化"
+                                    width={600}
+                                    height={600}
+                                    className="w-full"
+                                />
+                            </div>
+                            <p className="text-center text-sm text-gray-600 leading-relaxed">
+                                眉毛を整えるだけで、清潔感のある自然な印象に。<br />
+                                骨格やお顔立ちに合わせたデザインで、第一印象が大きく変わります。<br />
+                                <span className="text-gray-500">※効果には個人差があります。お客様の骨格・毛質に合わせて最適なデザインをご提案します。</span>
+                            </p>
                         </div>
                     </div>
                 </section>
