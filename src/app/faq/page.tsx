@@ -68,7 +68,7 @@ export default function FaqPage() {
                             alt=""
                             width={80}
                             height={80}
-                            className="w-20 h-20 object-contain"
+                            className="hidden md:block w-20 h-20 object-contain"
                         />
                         <h1 className="text-3xl md:text-4xl font-bold">よくあるご質問</h1>
                         <Image
@@ -76,7 +76,7 @@ export default function FaqPage() {
                             alt=""
                             width={80}
                             height={80}
-                            className="w-20 h-20 object-contain"
+                            className="hidden md:block w-20 h-20 object-contain"
                         />
                     </div>
 

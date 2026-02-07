@@ -83,8 +83,8 @@ export default function Home() {
                     <div className="max-w-4xl mx-auto px-4">
                         {/* タイトル */}
                         <div className="text-center mb-10 md:mb-14">
-                            <h2 className="text-2xl md:text-3xl font-bold tracking-widest mb-2">
-                                眉で印象は大きく変わる<br className="md:hidden" />顔立ちからベストな眉をご提案
+                            <h2 className="text-xl md:text-3xl font-bold tracking-widest mb-2">
+                                眉で印象は大きく変わる<br />顔立ちからベストな眉をご提案
                             </h2>
                             <div className="w-48 h-0.5 bg-gray-800 mx-auto mb-2"></div>
                             <p className="text-sm tracking-widest text-gray-600">ABOUT</p>
