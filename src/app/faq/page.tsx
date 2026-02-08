@@ -74,7 +74,7 @@ export default function FaqPage() {
                             height={80}
                             className="hidden md:block w-20 h-20 object-contain"
                         />
-                        <h1 className="text-3xl md:text-4xl font-bold">よくあるご質問</h1>
+                        <h1 className="text-3xl md:text-4xl font-bold text-brand">よくあるご質問</h1>
                         <Image
                             src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/mascot-flying-right.webp`}
                             alt=""
@@ -111,7 +111,7 @@ export default function FaqPage() {
                     </div>
 
                     <div className="mt-12 bg-white rounded-lg shadow-md p-8 text-center">
-                        <h2 className="text-2xl font-bold mb-4">その他ご質問がある場合</h2>
+                        <h2 className="text-2xl font-bold mb-4 text-brand">その他ご質問がある場合</h2>
                         <p className="text-gray-600 mb-6">
                             沖縄・那覇でメンズ眉毛サロンをお探しの方、施術内容や料金についてなど、<br className="hidden md:inline" />
                             お気軽にLINEからお問い合わせください。

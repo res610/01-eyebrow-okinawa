@@ -19,7 +19,7 @@ export default function PricingPage() {
             <Header />
             <main className="min-h-screen bg-gray-50">
                 <div className="max-w-4xl mx-auto px-4 py-12 md:py-16">
-                    <h1 className="text-3xl md:text-4xl font-bold text-center mb-4 md:mb-6">料金表・メニュー</h1>
+                    <h1 className="text-3xl md:text-4xl font-bold text-center mb-4 md:mb-6 text-brand">料金表・メニュー</h1>
                     <p className="text-sm md:text-base text-gray-600 text-center mb-8 md:mb-12 leading-relaxed">
                         沖縄・那覇のメンズ眉毛サロン01（O-ONE）の施術メニューと料金のご案内です。<br className="hidden md:inline" />
                         眉毛ワックス・眉毛パーマをはじめ、鼻毛ワックスや毛穴洗浄などのオプションメニューもご用意しています。
@@ -27,7 +27,7 @@ export default function PricingPage() {
 
                     {/* 基本メニュー */}
                     <div className="bg-white rounded-lg shadow-md p-6 md:p-8 mb-8">
-                        <h2 className="text-2xl md:text-3xl font-bold mb-6">基本メニュー</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold mb-6 text-brand">基本メニュー</h2>
                         <div className="space-y-6">
                             <div className="border-b pb-6">
                                 <div className="flex items-start gap-4">
@@ -133,7 +133,7 @@ export default function PricingPage() {
 
                     {/* オプションメニュー */}
                     <div className="bg-white rounded-lg shadow-md p-6 md:p-8 mb-8">
-                        <h2 className="text-2xl md:text-3xl font-bold mb-6">オプション</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold mb-6 text-brand">オプション</h2>
                         <div className="space-y-4">
                             <div className="flex justify-between items-center border-b pb-4">
                                 <div>

@@ -26,7 +26,7 @@ export default function TermsPage() {
                             height={80}
                             className="w-14 h-14 md:w-20 md:h-20 object-contain scale-x-[-1]"
                         />
-                        <h1 className="text-3xl md:text-4xl font-bold">利用規約</h1>
+                        <h1 className="text-3xl md:text-4xl font-bold text-brand">利用規約</h1>
                         <Image
                             src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/mascot-arms-crossed.webp`}
                             alt=""
@@ -45,7 +45,7 @@ export default function TermsPage() {
 
                             {/* 第1条 */}
                             <section>
-                                <h2 className="text-lg font-bold mb-3">第1条（サービス内容）</h2>
+                                <h2 className="text-lg font-bold mb-3 text-brand">第1条（サービス内容）</h2>
                                 <div className="space-y-2">
                                     <p>当サロンは、眉毛スタイリングを主とした美容サービスを提供しています。</p>
                                     <p>風俗営業、性的サービス、またはこれらに類する行為を目的としたご利用は固くお断りいたします。不適切なご利用が確認された場合、施術を中止し、以後のご利用をお断りさせていただきます。</p>
@@ -54,7 +54,7 @@ export default function TermsPage() {
 
                             {/* 第2条 */}
                             <section>
-                                <h2 className="text-lg font-bold mb-3">第2条（ご予約・キャンセルについて）</h2>
+                                <h2 className="text-lg font-bold mb-3 text-brand">第2条（ご予約・キャンセルについて）</h2>
                                 <div className="space-y-2">
                                     <p>当サロンは完全予約制です。</p>
                                     <p>キャンセル・変更をされる場合は、前日までにご連絡ください。</p>
@@ -64,7 +64,7 @@ export default function TermsPage() {
 
                             {/* 第3条 */}
                             <section>
-                                <h2 className="text-lg font-bold mb-3">第3条（利用料金・お支払い）</h2>
+                                <h2 className="text-lg font-bold mb-3 text-brand">第3条（利用料金・お支払い）</h2>
                                 <div className="space-y-2">
                                     <p>利用料金は、店内掲示およびWebサイトに記載のとおりです。</p>
                                     <p>お支払いは施術後に現金でお願いしております。</p>
@@ -73,7 +73,7 @@ export default function TermsPage() {
 
                             {/* 第4条 */}
                             <section>
-                                <h2 className="text-lg font-bold mb-3">第4条（未成年者のご利用）</h2>
+                                <h2 className="text-lg font-bold mb-3 text-brand">第4条（未成年者のご利用）</h2>
                                 <div className="space-y-2">
                                     <p>未成年（18歳未満）の方が施術を受ける場合、保護者の同意が必要です。</p>
                                     <p>ご来店前に保護者の方へご確認のうえ、ご予約ください。</p>
@@ -83,7 +83,7 @@ export default function TermsPage() {
 
                             {/* 第5条 */}
                             <section>
-                                <h2 className="text-lg font-bold mb-3">第5条（施術に関する注意事項）</h2>
+                                <h2 className="text-lg font-bold mb-3 text-brand">第5条（施術に関する注意事項）</h2>
                                 <ol className="list-decimal list-inside space-y-2">
                                     <li>施術部位に炎症・傷・重度の肌荒れ等がある場合、施術をお断りすることがあります。</li>
                                     <li>施術当日は、激しい運動・サウナ・長時間の入浴はお避けください。</li>
@@ -94,7 +94,7 @@ export default function TermsPage() {
 
                             {/* 第6条 */}
                             <section>
-                                <h2 className="text-lg font-bold mb-3">第6条（禁止行為）</h2>
+                                <h2 className="text-lg font-bold mb-3 text-brand">第6条（禁止行為）</h2>
                                 <p className="mb-2">お客様には、サロン内およびLINE等の連絡手段において、以下の行為をお控えいただくようお願いいたします。</p>
                                 <ul className="list-disc list-inside space-y-1 ml-2">
                                     <li>スタッフへの暴言、威圧、脅迫等のハラスメント行為</li>
@@ -111,7 +111,7 @@ export default function TermsPage() {
 
                             {/* 第7条 */}
                             <section>
-                                <h2 className="text-lg font-bold mb-3">第7条（免責事項）</h2>
+                                <h2 className="text-lg font-bold mb-3 text-brand">第7条（免責事項）</h2>
                                 <ol className="list-decimal list-inside space-y-2">
                                     <li>当サロンは施術において細心の注意を払いますが、施術に伴う軽微な肌の赤み・かぶれ等について、当サロンに過失がない場合は責任を負いかねます。</li>
                                     <li>お客様が事前に肌の状態やアレルギー等について正確にお申し出いただけなかった場合に生じたトラブルについては、責任を負いかねます。</li>
@@ -122,7 +122,7 @@ export default function TermsPage() {
 
                             {/* 第8条 */}
                             <section>
-                                <h2 className="text-lg font-bold mb-3">第8条（個人情報の取り扱い）</h2>
+                                <h2 className="text-lg font-bold mb-3 text-brand">第8条（個人情報の取り扱い）</h2>
                                 <ol className="list-decimal list-inside space-y-2">
                                     <li>当サロンは、予約・施術に必要な範囲でお客様の個人情報（氏名、連絡先等）をお預かりします。</li>
                                     <li>お預かりした個人情報は、予約管理・施術の提供・ご連絡の目的にのみ使用いたします。</li>
@@ -132,7 +132,7 @@ export default function TermsPage() {
 
                             {/* 第9条 */}
                             <section>
-                                <h2 className="text-lg font-bold mb-3">第9条（反社会的勢力の排除）</h2>
+                                <h2 className="text-lg font-bold mb-3 text-brand">第9条（反社会的勢力の排除）</h2>
                                 <div className="space-y-2">
                                     <p>当サロンは、反社会的勢力との一切の関係を遮断しています。</p>
                                     <p>お客様が反社会的勢力に該当する場合、またはそれに準ずる関係にあると判明した場合は、サービスの提供をお断りし、以後のご利用をお断りさせていただきます。</p>
@@ -141,13 +141,13 @@ export default function TermsPage() {
 
                             {/* 第10条 */}
                             <section>
-                                <h2 className="text-lg font-bold mb-3">第10条（規約の変更）</h2>
+                                <h2 className="text-lg font-bold mb-3 text-brand">第10条（規約の変更）</h2>
                                 <p>当サロンは、必要に応じて本規約を変更することがあります。変更後の規約は、当サロンのWebサイトに掲載した時点で効力を生じるものとします。</p>
                             </section>
 
                             {/* 第11条 */}
                             <section>
-                                <h2 className="text-lg font-bold mb-3">第11条（準拠法・裁判管轄）</h2>
+                                <h2 className="text-lg font-bold mb-3 text-brand">第11条（準拠法・裁判管轄）</h2>
                                 <ol className="list-decimal list-inside space-y-2">
                                     <li>本規約の解釈にあたっては、日本法を準拠法とします。</li>
                                     <li>本サービスに関して紛争が生じた場合には、当サロンの所在地を管轄する裁判所を専属的合意管轄とします。</li>

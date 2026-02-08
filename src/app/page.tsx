@@ -29,10 +29,10 @@ export default function Home() {
 
                             {/* テキストコンテンツ */}
                             <div className="text-center md:text-left">
-                                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight">
+                                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight text-brand">
                                     EYEBROW STYLING<br />FOR MEN OKINAWA
                                 </h1>
-                                <p className="text-2xl sm:text-3xl mb-3 md:mb-4 font-bold">01（O-ONE）</p>
+                                <p className="text-2xl sm:text-3xl mb-3 md:mb-4 font-bold text-brand">01（O-ONE）</p>
                                 <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 md:mb-8 px-2 md:px-0">
                                     沖縄県那覇市おもろまちのメンズ専門眉毛ワックスサロン
                                 </p>
@@ -83,11 +83,11 @@ export default function Home() {
                     <div className="max-w-4xl mx-auto px-4">
                         {/* タイトル */}
                         <div className="text-center mb-10 md:mb-14">
-                            <h2 className="text-xl md:text-3xl font-bold tracking-widest mb-2">
+                            <h2 className="text-xl md:text-3xl font-bold tracking-widest mb-2 text-brand">
                                 眉で印象は大きく変わる<br />顔立ちからベストな眉をご提案
                             </h2>
-                            <div className="w-48 h-0.5 bg-gray-800 mx-auto mb-2"></div>
-                            <p className="text-sm tracking-widest text-gray-600">ABOUT</p>
+                            <div className="w-48 h-0.5 bg-brand mx-auto mb-2"></div>
+                            <p className="text-sm tracking-widest text-brand-light">ABOUT</p>
                         </div>
                         <div className="bg-gray-50 rounded-lg p-6 md:p-8">
                             <div className="flex flex-col md:flex-row md:gap-8">
@@ -127,9 +127,9 @@ export default function Home() {
                     <div className="max-w-6xl mx-auto px-4">
                         {/* タイトル */}
                         <div className="text-center mb-10 md:mb-14">
-                            <h2 className="text-2xl md:text-3xl font-bold tracking-widest mb-2">01が選ばれる3つの理由</h2>
-                            <div className="w-48 h-0.5 bg-gray-800 mx-auto mb-2"></div>
-                            <p className="text-sm tracking-widest text-gray-600">3 REASONS TO CHOOSE 01</p>
+                            <h2 className="text-2xl md:text-3xl font-bold tracking-widest mb-2 text-brand">01が選ばれる3つの理由</h2>
+                            <div className="w-48 h-0.5 bg-brand mx-auto mb-2"></div>
+                            <p className="text-sm tracking-widest text-brand-light">3 REASONS TO CHOOSE 01</p>
                         </div>
 
                         <div className="space-y-12 md:space-y-16">
@@ -225,9 +225,9 @@ export default function Home() {
                 <section className="py-12 md:py-16 bg-white">
                     <div className="max-w-4xl mx-auto px-4">
                         <div className="text-center mb-10 md:mb-14">
-                            <h2 className="text-2xl md:text-3xl font-bold tracking-widest mb-2">施術のビフォーアフター</h2>
-                            <div className="w-48 h-0.5 bg-gray-800 mx-auto mb-2"></div>
-                            <p className="text-sm tracking-widest text-gray-600">BEFORE &amp; AFTER</p>
+                            <h2 className="text-2xl md:text-3xl font-bold tracking-widest mb-2 text-brand">施術のビフォーアフター</h2>
+                            <div className="w-48 h-0.5 bg-brand mx-auto mb-2"></div>
+                            <p className="text-sm tracking-widest text-brand-light">BEFORE &amp; AFTER</p>
                         </div>
                         <p className="text-sm md:text-base text-gray-600 text-center mb-8 leading-relaxed">
                             沖縄・那覇のメンズ眉毛サロン01（O-ONE）での施術例をご紹介します。<br className="hidden md:inline" />
@@ -235,7 +235,7 @@ export default function Home() {
                         </p>
                         <div className="space-y-8">
                             {/* 顔全体のビフォーアフター */}
-                            <div className="rounded-lg overflow-hidden shadow-lg">
+                            <div className="md:w-1/2 md:mx-auto rounded-lg overflow-hidden shadow-lg">
                                 <Image
                                     src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/before-after-face.webp`}
                                     alt="沖縄メンズ眉毛サロン01での眉毛ワックス施術ビフォーアフター：施術前と施術後の顔全体の印象変化"
@@ -249,7 +249,7 @@ export default function Home() {
                                 </div>
                             </div>
                             {/* 眉クローズアップ */}
-                            <div className="max-w-sm mx-auto rounded-lg overflow-hidden shadow-lg">
+                            <div className="max-w-sm md:max-w-[25%] mx-auto rounded-lg overflow-hidden shadow-lg">
                                 <Image
                                     src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/before-after-eyebrow.webp`}
                                     alt="眉毛のクローズアップ：施術前後の眉の形・毛流れの変化"
@@ -274,9 +274,9 @@ export default function Home() {
                 <section className="py-12 md:py-16 bg-white">
                     <div className="max-w-4xl mx-auto px-4">
                         <div className="text-center mb-10 md:mb-14">
-                            <h2 className="text-2xl md:text-3xl font-bold tracking-widest mb-2">Instagram</h2>
-                            <div className="w-48 h-0.5 bg-gray-800 mx-auto mb-2"></div>
-                            <p className="text-sm tracking-widest text-gray-600">FOLLOW US</p>
+                            <h2 className="text-2xl md:text-3xl font-bold tracking-widest mb-2 text-brand">Instagram</h2>
+                            <div className="w-48 h-0.5 bg-brand mx-auto mb-2"></div>
+                            <p className="text-sm tracking-widest text-brand-light">FOLLOW US</p>
                         </div>
                         {/* 仮レイアウト: LightWidget連携後に差し替え */}
                         <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-3">
@@ -317,9 +317,9 @@ export default function Home() {
                     <div className="max-w-6xl mx-auto px-4">
                         {/* タイトル */}
                         <div className="text-center mb-10 md:mb-14">
-                            <h2 className="text-2xl md:text-3xl font-bold tracking-widest mb-2">店舗紹介</h2>
-                            <div className="w-48 h-0.5 bg-gray-800 mx-auto mb-2"></div>
-                            <p className="text-sm tracking-widest text-gray-600">SALON LIST</p>
+                            <h2 className="text-2xl md:text-3xl font-bold tracking-widest mb-2 text-brand">店舗紹介</h2>
+                            <div className="w-48 h-0.5 bg-brand mx-auto mb-2"></div>
+                            <p className="text-sm tracking-widest text-brand-light">SALON LIST</p>
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -376,9 +376,9 @@ export default function Home() {
                     <div className="max-w-4xl mx-auto px-4">
                         {/* タイトル */}
                         <div className="text-center mb-10 md:mb-14">
-                            <h2 className="text-2xl md:text-3xl font-bold tracking-widest mb-2">アクセス</h2>
-                            <div className="w-48 h-0.5 bg-gray-800 mx-auto mb-2"></div>
-                            <p className="text-sm tracking-widest text-gray-600">ACCESS</p>
+                            <h2 className="text-2xl md:text-3xl font-bold tracking-widest mb-2 text-brand">アクセス</h2>
+                            <div className="w-48 h-0.5 bg-brand mx-auto mb-2"></div>
+                            <p className="text-sm tracking-widest text-brand-light">ACCESS</p>
                         </div>
                         {/* Googleマップ */}
                         <div className="rounded-lg overflow-hidden shadow-lg">
@@ -411,9 +411,9 @@ export default function Home() {
                     <div className="max-w-4xl mx-auto px-4">
                         {/* タイトル部分 */}
                         <div className="text-center mb-6">
-                            <h2 className="text-2xl md:text-3xl font-bold tracking-widest mb-2">キャンセルポリシー</h2>
-                            <div className="w-48 h-0.5 bg-gray-800 mx-auto mb-2"></div>
-                            <p className="text-sm tracking-widest text-gray-600">CANCELLATION POLICY</p>
+                            <h2 className="text-2xl md:text-3xl font-bold tracking-widest mb-2 text-brand">キャンセルポリシー</h2>
+                            <div className="w-48 h-0.5 bg-brand mx-auto mb-2"></div>
+                            <p className="text-sm tracking-widest text-brand-light">CANCELLATION POLICY</p>
                         </div>
 
                         {/* PC版 */}
@@ -444,9 +444,9 @@ export default function Home() {
                     <div className="max-w-4xl mx-auto px-4 text-center">
                         {/* タイトル */}
                         <div className="text-center mb-10 md:mb-14">
-                            <h2 className="text-2xl md:text-3xl font-bold tracking-widest mb-2">詳しい情報はこちら</h2>
-                            <div className="w-48 h-0.5 bg-gray-800 mx-auto mb-2"></div>
-                            <p className="text-sm tracking-widest text-gray-600">INFORMATION</p>
+                            <h2 className="text-2xl md:text-3xl font-bold tracking-widest mb-2 text-brand">詳しい情報はこちら</h2>
+                            <div className="w-48 h-0.5 bg-brand mx-auto mb-2"></div>
+                            <p className="text-sm tracking-widest text-brand-light">INFORMATION</p>
                         </div>
                         <div className="flex flex-col md:flex-row gap-4 justify-center mb-8">
                             <Link
