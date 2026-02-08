@@ -270,6 +270,48 @@ export default function Home() {
                 {/* お客様の声 Section */}
                 <CustomerVoices />
 
+                {/* Instagram Section */}
+                <section className="py-12 md:py-16 bg-white">
+                    <div className="max-w-4xl mx-auto px-4">
+                        <div className="text-center mb-10 md:mb-14">
+                            <h2 className="text-2xl md:text-3xl font-bold tracking-widest mb-2">Instagram</h2>
+                            <div className="w-48 h-0.5 bg-gray-800 mx-auto mb-2"></div>
+                            <p className="text-sm tracking-widest text-gray-600">FOLLOW US</p>
+                        </div>
+                        {/* 仮レイアウト: LightWidget連携後に差し替え */}
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-3">
+                            {[
+                                'mascot.webp',
+                                'mascot-arms-crossed.webp',
+                                'mascot-flying-left.webp',
+                                'mascot-flying-right.webp',
+                                'mascot.webp',
+                                'mascot-arms-crossed.webp',
+                            ].map((img, i) => (
+                                <div key={i} className={`aspect-square bg-gray-100 rounded-lg overflow-hidden${i >= 4 ? ' hidden md:block' : ''}`}>
+                                    <Image
+                                        src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/${img}`}
+                                        alt="Instagramの投稿（準備中）"
+                                        width={400}
+                                        height={400}
+                                        className="w-full h-full object-contain p-4"
+                                    />
+                                </div>
+                            ))}
+                        </div>
+                        <div className="text-center mt-6">
+                            <a
+                                href="https://www.instagram.com/01.o_one/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-block px-6 py-3 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 text-white text-sm md:text-base font-medium rounded-full hover:opacity-90 transition-opacity"
+                            >
+                                @01.o_one をフォロー
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
                 {/* 店舗紹介 Section */}
                 <section className="py-12 md:py-16 bg-gray-50">
                     <div className="max-w-6xl mx-auto px-4">
