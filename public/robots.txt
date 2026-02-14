@@ -1,6 +1,0 @@
-# https://www.robotstxt.org/robotstxt.html
-User-agent: *
-Allow: /
-
-# Sitemap
-Sitemap: https://res610.github.io/01-eyebrow-okinawa/sitemap.xml

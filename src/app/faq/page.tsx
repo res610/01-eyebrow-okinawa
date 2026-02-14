@@ -61,9 +61,26 @@ export default function FaqPage() {
         },
     ];
 
+    const faqJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: faqs.map((faq) => ({
+            "@type": "Question",
+            name: faq.question,
+            acceptedAnswer: {
+                "@type": "Answer",
+                text: faq.answer,
+            },
+        })),
+    };
+
     return (
         <>
             <Header />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+            />
             <main className="min-h-screen bg-gray-50">
                 <div className="max-w-4xl mx-auto px-4 py-16">
                     <div className="flex items-center justify-center gap-4 mb-12">

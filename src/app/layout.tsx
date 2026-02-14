@@ -3,10 +3,9 @@ import "./globals.css";
 import { STORE_LATITUDE, STORE_LONGITUDE } from "@/constants";
 
 const gaId = process.env.NEXT_PUBLIC_GA_ID;
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
-const siteUrl = process.env.NODE_ENV === 'development'
-    ? 'http://localhost:3000'
-    : 'https://res610.github.io/01-eyebrow-okinawa';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
 
 export const metadata: Metadata = {
     title: {
@@ -72,6 +71,16 @@ export const metadata: Metadata = {
             "max-snippet": -1,
         },
     },
+    icons: {
+        icon: [
+            { url: `${basePath}/favicon.ico`, sizes: "any" },
+            { url: `${basePath}/icon.png`, type: "image/png", sizes: "32x32" },
+        ],
+        apple: [
+            { url: `${basePath}/apple-icon.png`, sizes: "180x180", type: "image/png" },
+        ],
+    },
+    manifest: `${basePath}/manifest.webmanifest`,
     verification: {
         // Google Search Console verification (add your verification code here)
         // google: "your-verification-code",
@@ -120,6 +129,7 @@ const jsonLd = {
     },
     sameAs: [
         "https://lin.ee/JfpRgB1",
+        "https://www.instagram.com/01.o_one/",
     ],
     hasOfferCatalog: {
         "@type": "OfferCatalog",
