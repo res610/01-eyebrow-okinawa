@@ -43,6 +43,25 @@ fs.writeFileSync(
     }, null, 4)
 );
 
+// ビルド時に sitemap.xml を自動生成（XML宣言付き）
+const today = new Date().toISOString().split('T')[0];
+const sitemapPages = [
+    { loc: '/', priority: '1.0', changefreq: 'weekly' },
+    { loc: '/pricing/', priority: '0.8', changefreq: 'monthly' },
+    { loc: '/faq/', priority: '0.7', changefreq: 'monthly' },
+];
+const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${sitemapPages.map(p => `    <url>
+        <loc>${siteUrl}${p.loc}</loc>
+        <lastmod>${today}</lastmod>
+        <changefreq>${p.changefreq}</changefreq>
+        <priority>${p.priority}</priority>
+    </url>`).join('\n')}
+</urlset>
+`;
+fs.writeFileSync(path.join(__dirname, 'public', 'sitemap.xml'), sitemapXml);
+
 const nextConfig = {
     output: 'export',
     basePath,
