@@ -5,7 +5,6 @@ import LazyGoogleMap from '@/components/LazyGoogleMap';
 import ImageModal from '@/components/ImageModal';
 import Link from 'next/link';
 import Image from 'next/image';
-import { LIGHTWIDGET_ID } from '@/constants';
 
 export default function Home() {
     return (
@@ -279,14 +278,27 @@ export default function Home() {
                             <div className="w-48 h-0.5 bg-brand mx-auto mb-2"></div>
                             <p className="text-sm tracking-widest text-brand-light">FOLLOW US</p>
                         </div>
-                        {/* LightWidget Instagram埋め込み */}
-                        <iframe
-                            src={`//lightwidget.com/widgets/${LIGHTWIDGET_ID}.html`}
-                            allowTransparency={true}
-                            className="w-full border-0 overflow-hidden"
-                            style={{ minHeight: '300px' }}
-                            title="Instagram @01.o_one"
-                        />
+                        {/* 仮レイアウト: Curator.io連携後に差し替え */}
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-3">
+                            {[
+                                'mascot.webp',
+                                'mascot-arms-crossed.webp',
+                                'mascot-flying-left.webp',
+                                'mascot-flying-right.webp',
+                                'mascot.webp',
+                                'mascot-arms-crossed.webp',
+                            ].map((img, i) => (
+                                <div key={i} className={`aspect-square bg-gray-100 rounded-lg overflow-hidden${i >= 4 ? ' hidden md:block' : ''}`}>
+                                    <Image
+                                        src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/${img}`}
+                                        alt="Instagramの投稿（準備中）"
+                                        width={400}
+                                        height={400}
+                                        className="w-full h-full object-contain p-4"
+                                    />
+                                </div>
+                            ))}
+                        </div>
                         <div className="text-center mt-6">
                             <a
                                 href="https://www.instagram.com/01.o_one/"
