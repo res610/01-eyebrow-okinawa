@@ -5,6 +5,7 @@ import LazyGoogleMap from '@/components/LazyGoogleMap';
 import ImageModal from '@/components/ImageModal';
 import Link from 'next/link';
 import Image from 'next/image';
+import Script from 'next/script';
 
 export default function Home() {
     return (
@@ -278,27 +279,13 @@ export default function Home() {
                             <div className="w-48 h-0.5 bg-brand mx-auto mb-2"></div>
                             <p className="text-sm tracking-widest text-brand-light">FOLLOW US</p>
                         </div>
-                        {/* 仮レイアウト: Curator.io連携後に差し替え */}
-                        <div className="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-3">
-                            {[
-                                'mascot.webp',
-                                'mascot-arms-crossed.webp',
-                                'mascot-flying-left.webp',
-                                'mascot-flying-right.webp',
-                                'mascot.webp',
-                                'mascot-arms-crossed.webp',
-                            ].map((img, i) => (
-                                <div key={i} className={`aspect-square bg-gray-100 rounded-lg overflow-hidden${i >= 4 ? ' hidden md:block' : ''}`}>
-                                    <Image
-                                        src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/${img}`}
-                                        alt="Instagramの投稿（準備中）"
-                                        width={400}
-                                        height={400}
-                                        className="w-full h-full object-contain p-4"
-                                    />
-                                </div>
-                            ))}
+                        <div id="curator-feed-default-feed-layout">
+                            <a href="https://curator.io" target="_blank" rel="noopener noreferrer" className="crt-logo crt-tag">Powered by Curator.io</a>
                         </div>
+                        <Script
+                            src="https://cdn.curator.io/published/174278de-248a-42f6-b3a5-698464226971.js"
+                            strategy="lazyOnload"
+                        />
                         <div className="text-center mt-6">
                             <a
                                 href="https://www.instagram.com/01.o_one/"
