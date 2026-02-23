@@ -3,9 +3,9 @@ import Footer from '@/components/Footer';
 import CustomerVoices from '@/components/CustomerVoices';
 import LazyGoogleMap from '@/components/LazyGoogleMap';
 import ImageModal from '@/components/ImageModal';
+import InstagramFeed from '@/components/InstagramFeed';
 import Link from 'next/link';
 import Image from 'next/image';
-import Script from 'next/script';
 
 export default function Home() {
     return (
@@ -272,32 +272,7 @@ export default function Home() {
                 <CustomerVoices />
 
                 {/* Instagram Section */}
-                <section className="py-12 md:py-16 bg-white">
-                    <div className="max-w-4xl mx-auto px-4">
-                        <div className="text-center mb-10 md:mb-14">
-                            <h2 className="text-2xl md:text-3xl font-bold tracking-widest mb-2 text-brand">Instagram</h2>
-                            <div className="w-48 h-0.5 bg-brand mx-auto mb-2"></div>
-                            <p className="text-sm tracking-widest text-brand-light">FOLLOW US</p>
-                        </div>
-                        <div id="curator-feed-default-feed-layout">
-                            <a href="https://curator.io" target="_blank" rel="noopener noreferrer" className="crt-logo crt-tag">Powered by Curator.io</a>
-                        </div>
-                        <Script
-                            src="https://cdn.curator.io/published/174278de-248a-42f6-b3a5-698464226971.js?v=20260223"
-                            strategy="afterInteractive"
-                        />
-                        <div className="text-center mt-6">
-                            <a
-                                href="https://www.instagram.com/01.o_one/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-block px-6 py-3 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 text-white text-sm md:text-base font-medium rounded-full hover:opacity-90 transition-opacity"
-                            >
-                                @01.o_one をフォロー
-                            </a>
-                        </div>
-                    </div>
-                </section>
+                <InstagramFeed />
 
                 {/* 店舗紹介 Section */}
                 <section className="py-12 md:py-16 bg-gray-50">
