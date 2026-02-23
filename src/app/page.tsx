@@ -283,8 +283,8 @@ export default function Home() {
                             <a href="https://curator.io" target="_blank" rel="noopener noreferrer" className="crt-logo crt-tag">Powered by Curator.io</a>
                         </div>
                         <Script
-                            src="https://cdn.curator.io/published/174278de-248a-42f6-b3a5-698464226971.js"
-                            strategy="lazyOnload"
+                            src="https://cdn.curator.io/published/174278de-248a-42f6-b3a5-698464226971.js?v=20260223"
+                            strategy="afterInteractive"
                         />
                         <div className="text-center mt-6">
                             <a
