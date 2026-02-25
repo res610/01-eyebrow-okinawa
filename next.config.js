@@ -5,8 +5,8 @@ const path = require('path');
 const isDev = process.env.NODE_ENV === 'development';
 
 // ─── ドメイン移行時はここだけ変更 ───
-const SITE_DOMAIN = 'res610.github.io';
-const SITE_BASE_PATH = '/01-eyebrow-okinawa';
+const SITE_DOMAIN = '01-oone.com';
+const SITE_BASE_PATH = '';
 // 独自ドメイン例:
 //   const SITE_DOMAIN = '01-oone.com';
 //   const SITE_BASE_PATH = '';
