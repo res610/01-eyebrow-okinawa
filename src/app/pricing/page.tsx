@@ -7,15 +7,41 @@ export const metadata: Metadata = {
     title: '料金表・メニュー',
     description: '沖縄・那覇のメンズ眉毛サロン01（O-ONE）の料金表。眉毛ワックス・眉毛パーマ・鼻毛ワックスなど、メンズ向け眉毛メニューの料金をご案内。完全個室のプライベート空間で施術。',
     keywords: ['眉毛ワックス 料金 沖縄', 'メンズ眉毛 料金 那覇', '眉毛パーマ 料金', '眉毛サロン 料金表'],
+    alternates: {
+        canonical: '/pricing/',
+    },
     openGraph: {
         title: '料金表・メニュー | 01（O-ONE）沖縄メンズ眉毛サロン',
         description: '沖縄・那覇のメンズ眉毛サロン01（O-ONE）の料金表。眉毛ワックス・眉毛パーマの料金をご案内。',
     },
 };
 
+const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+        {
+            "@type": "ListItem",
+            position: 1,
+            name: "ホーム",
+            item: process.env.NEXT_PUBLIC_SITE_URL || "https://01-oone.com",
+        },
+        {
+            "@type": "ListItem",
+            position: 2,
+            name: "料金表・メニュー",
+            item: `${process.env.NEXT_PUBLIC_SITE_URL || "https://01-oone.com"}/pricing/`,
+        },
+    ],
+};
+
 export default function PricingPage() {
     return (
         <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+            />
             <Header />
             <main className="min-h-screen bg-gray-50">
                 <div className="max-w-4xl mx-auto px-4 py-12 md:py-16">

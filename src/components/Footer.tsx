@@ -14,7 +14,7 @@ export default function Footer() {
                         {/* SNS Link */}
                         <div className="mt-4">
                             <a
-                                href="https://www.instagram.com/p/DT0H-Yekmlg/"
+                                href="https://www.instagram.com/01.o_one/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors text-sm"

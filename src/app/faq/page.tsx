@@ -7,10 +7,32 @@ export const metadata: Metadata = {
     title: 'よくあるご質問',
     description: '沖縄・那覇のメンズ眉毛サロン01（O-ONE）のよくあるご質問。眉毛ワックスの痛み、施術時間、来店頻度など、メンズ眉毛施術に関するQ&Aをご紹介。',
     keywords: ['眉毛ワックス 痛み', 'メンズ眉毛 施術時間', '眉毛サロン 頻度', '眉毛 Q&A'],
+    alternates: {
+        canonical: '/faq/',
+    },
     openGraph: {
         title: 'よくあるご質問 | 01（O-ONE）沖縄メンズ眉毛サロン',
         description: '沖縄・那覇のメンズ眉毛サロン01（O-ONE）のよくあるご質問。眉毛ワックスに関するQ&Aをご紹介。',
     },
+};
+
+const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+        {
+            "@type": "ListItem",
+            position: 1,
+            name: "ホーム",
+            item: process.env.NEXT_PUBLIC_SITE_URL || "https://01-oone.com",
+        },
+        {
+            "@type": "ListItem",
+            position: 2,
+            name: "よくあるご質問",
+            item: `${process.env.NEXT_PUBLIC_SITE_URL || "https://01-oone.com"}/faq/`,
+        },
+    ],
 };
 
 export default function FaqPage() {
@@ -80,6 +102,10 @@ export default function FaqPage() {
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
             />
             <main className="min-h-screen bg-gray-50">
                 <div className="max-w-4xl mx-auto px-4 py-16">

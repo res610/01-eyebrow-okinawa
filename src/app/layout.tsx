@@ -74,7 +74,7 @@ export const metadata: Metadata = {
     icons: {
         icon: [
             { url: `${basePath}/favicon.ico`, sizes: "any" },
-            { url: `${basePath}/icon.png`, type: "image/png", sizes: "32x32" },
+            { url: `${basePath}/icon.png`, type: "image/png", sizes: "96x96" },
         ],
         apple: [
             { url: `${basePath}/apple-icon.png`, sizes: "180x180", type: "image/png" },
@@ -95,8 +95,13 @@ const jsonLd = {
     alternateName: "オーワン",
     description: "沖縄県那覇市おもろまちのメンズ専門眉毛ワックスサロン。完全個室で眉毛ワックス・眉毛パーマの施術を行っています。",
     url: siteUrl,
-    telephone: "",
     image: `${siteUrl}/images/mascot.webp`,
+    contactPoint: {
+        "@type": "ContactPoint",
+        contactType: "reservations",
+        url: "https://lin.ee/JfpRgB1",
+        availableLanguage: "Japanese",
+    },
     address: {
         "@type": "PostalAddress",
         streetAddress: "おもろまち4-6-19 フレックスおもろまち401",
@@ -125,7 +130,7 @@ const jsonLd = {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
         opens: "10:00",
-        closes: "20:00",
+        closes: "19:00",
     },
     sameAs: [
         "https://lin.ee/JfpRgB1",
