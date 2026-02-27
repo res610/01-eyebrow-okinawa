@@ -47,10 +47,10 @@ export const metadata: Metadata = {
         type: "website",
         images: [
             {
-                url: `${siteUrl}/images/mascot.webp`,
-                width: 800,
-                height: 800,
-                alt: "01（O-ONE）メンズ眉毛サロン 沖縄",
+                url: `${siteUrl}/images/og-image.png`,
+                width: 1200,
+                height: 630,
+                alt: "01（O-ONE）メンズ眉毛サロン 沖縄・那覇おもろまち",
             },
         ],
     },
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "メンズ眉毛サロン 01（O-ONE）| 沖縄・那覇おもろまち",
         description: "沖縄県那覇市おもろまちのメンズ専門眉毛ワックスサロン。完全個室で眉毛ワックス・眉毛パーマの施術。",
-        images: [`${siteUrl}/images/mascot.webp`],
+        images: [`${siteUrl}/images/og-image.png`],
     },
     robots: {
         index: true,

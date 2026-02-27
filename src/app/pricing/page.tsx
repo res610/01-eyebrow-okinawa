@@ -16,6 +16,84 @@ export const metadata: Metadata = {
     },
 };
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://01-oone.com";
+
+const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "01（O-ONE）メンズ眉毛サービス料金表",
+    itemListElement: [
+        {
+            "@type": "ListItem",
+            position: 1,
+            item: {
+                "@type": "Service",
+                name: "眉毛＋毛穴ケア〈ワックス〉",
+                description: "眉毛を整えながら、鼻まわりの毛穴汚れも一緒にケアできるセットメニュー。清潔感・肌印象を同時に整えたい方におすすめ。",
+                provider: { "@type": "BeautySalon", name: "01（O-ONE）" },
+                areaServed: { "@type": "City", name: "那覇市" },
+                offers: {
+                    "@type": "Offer",
+                    price: "8000",
+                    priceCurrency: "JPY",
+                    url: `${siteUrl}/pricing/`,
+                },
+            },
+        },
+        {
+            "@type": "ListItem",
+            position: 2,
+            item: {
+                "@type": "Service",
+                name: "眉毛＋毛穴ケア〈パーマ〉",
+                description: "眉毛パーマ（ワックス込み）と毛穴ケアを組み合わせたセットメニュー。眉の形・毛流れ・肌印象までまとめて整えたい方におすすめ。",
+                provider: { "@type": "BeautySalon", name: "01（O-ONE）" },
+                areaServed: { "@type": "City", name: "那覇市" },
+                offers: {
+                    "@type": "Offer",
+                    price: "9000",
+                    priceCurrency: "JPY",
+                    url: `${siteUrl}/pricing/`,
+                },
+            },
+        },
+        {
+            "@type": "ListItem",
+            position: 3,
+            item: {
+                "@type": "Service",
+                name: "眉毛デザイン〈ワックス〉",
+                description: "眉周りのムダ毛をワックスで整え、骨格に合わせて清潔感のある眉に仕上げます。",
+                provider: { "@type": "BeautySalon", name: "01（O-ONE）" },
+                areaServed: { "@type": "City", name: "那覇市" },
+                offers: {
+                    "@type": "Offer",
+                    price: "5000",
+                    priceCurrency: "JPY",
+                    url: `${siteUrl}/pricing/`,
+                },
+            },
+        },
+        {
+            "@type": "ListItem",
+            position: 4,
+            item: {
+                "@type": "Service",
+                name: "眉毛デザイン〈パーマ〉",
+                description: "眉毛の生えグセを整えるパーマ施術。ワックス処理込みで、毎日のスタイリングが楽になります。",
+                provider: { "@type": "BeautySalon", name: "01（O-ONE）" },
+                areaServed: { "@type": "City", name: "那覇市" },
+                offers: {
+                    "@type": "Offer",
+                    price: "6000",
+                    priceCurrency: "JPY",
+                    url: `${siteUrl}/pricing/`,
+                },
+            },
+        },
+    ],
+};
+
 const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -24,13 +102,13 @@ const breadcrumbJsonLd = {
             "@type": "ListItem",
             position: 1,
             name: "ホーム",
-            item: process.env.NEXT_PUBLIC_SITE_URL || "https://01-oone.com",
+            item: siteUrl,
         },
         {
             "@type": "ListItem",
             position: 2,
             name: "料金表・メニュー",
-            item: `${process.env.NEXT_PUBLIC_SITE_URL || "https://01-oone.com"}/pricing/`,
+            item: `${siteUrl}/pricing/`,
         },
     ],
 };
@@ -38,6 +116,10 @@ const breadcrumbJsonLd = {
 export default function PricingPage() {
     return (
         <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+            />
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
