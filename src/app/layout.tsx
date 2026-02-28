@@ -92,9 +92,10 @@ const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BeautySalon",
     name: "01（O-ONE）",
-    alternateName: "オーワン",
+    alternateName: ["オーワン", "メンズ眉毛専門店 01(オーワン)"],
     description: "沖縄県那覇市おもろまちのメンズ専門眉毛ワックスサロン。完全個室で眉毛ワックス・眉毛パーマの施術を行っています。",
     url: siteUrl,
+    telephone: "080-6491-1266",
     image: `${siteUrl}/images/mascot.webp`,
     contactPoint: {
         "@type": "ContactPoint",
