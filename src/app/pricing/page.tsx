@@ -1,6 +1,5 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import ImageModal from '@/components/ImageModal';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -138,103 +137,59 @@ export default function PricingPage() {
                         <h2 className="text-2xl md:text-3xl font-bold mb-6 text-brand">基本メニュー</h2>
                         <div className="space-y-6">
                             <div className="border-b pb-6">
-                                <div className="flex items-start gap-4">
-                                    <ImageModal
-                                        src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/menu-wax-pore.webp`}
-                                        alt="眉毛ワックスと毛穴ケアの施術写真"
-                                        width={96}
-                                        height={96}
-                                        className="flex-shrink-0 w-20 h-20 md:w-24 md:h-24 rounded-lg overflow-hidden"
-                                    />
-                                    <div className="flex-1">
-                                        <div className="flex justify-between items-start mb-3">
-                                            <h3 className="font-bold text-sm md:text-xl">
-                                                ★人気No.1｜眉毛＋毛穴ケア〈ワックス〉
-                                            </h3>
-                                            <p className="text-xl md:text-2xl font-bold text-gray-900 ml-4">¥8,000</p>
-                                        </div>
-                                        <p className="text-gray-700 text-[10px] md:text-sm mb-2">
-                                            眉毛を整えながら、鼻まわりの毛穴汚れも一緒にケアできるセット。
-                                            清潔感・肌印象を同時に整えたい方におすすめです。
-                                            初回はこちらを選ばれる方が多いメニューです。
-                                        </p>
-                                        <p className="text-gray-600 text-[10px] md:text-sm">所要時間：約120分</p>
-                                    </div>
+                                <div className="flex justify-between items-start mb-3">
+                                    <h3 className="font-bold text-sm md:text-xl">
+                                        ★人気No.1｜眉毛＋毛穴ケア〈ワックス〉
+                                    </h3>
+                                    <p className="text-xl md:text-2xl font-bold text-gray-900 ml-4">¥8,000</p>
                                 </div>
+                                <p className="text-gray-700 text-[10px] md:text-sm mb-2">
+                                    眉毛を整えながら、鼻まわりの毛穴汚れも一緒にケアできるセット。
+                                    清潔感・肌印象を同時に整えたい方におすすめです。
+                                    初回はこちらを選ばれる方が多いメニューです。
+                                </p>
+                                <p className="text-gray-600 text-[10px] md:text-sm">所要時間：約120分</p>
                             </div>
 
                             <div className="border-b pb-6">
-                                <div className="flex items-start gap-4">
-                                    <ImageModal
-                                        src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/menu-perm-pore.webp`}
-                                        alt="眉毛パーマと毛穴ケアの施術写真"
-                                        width={96}
-                                        height={96}
-                                        className="flex-shrink-0 w-20 h-20 md:w-24 md:h-24 rounded-lg overflow-hidden"
-                                    />
-                                    <div className="flex-1">
-                                        <div className="flex justify-between items-start mb-3">
-                                            <h3 className="font-bold text-sm md:text-xl">
-                                                ★人気No.1｜眉毛＋毛穴ケア〈パーマ〉
-                                            </h3>
-                                            <p className="text-xl md:text-2xl font-bold text-gray-900 ml-4">¥9,000</p>
-                                        </div>
-                                        <p className="text-gray-700 text-[10px] md:text-sm mb-2">
-                                            眉毛パーマ（ワックス込み）と毛穴ケアを組み合わせたセットメニューです。
-                                            眉の形・毛流れ・肌印象までまとめて整えたい方におすすめです。
-                                        </p>
-                                        <p className="text-gray-600 text-[10px] md:text-sm">所要時間：約150分</p>
-                                    </div>
+                                <div className="flex justify-between items-start mb-3">
+                                    <h3 className="font-bold text-sm md:text-xl">
+                                        ★人気No.1｜眉毛＋毛穴ケア〈パーマ〉
+                                    </h3>
+                                    <p className="text-xl md:text-2xl font-bold text-gray-900 ml-4">¥9,000</p>
                                 </div>
+                                <p className="text-gray-700 text-[10px] md:text-sm mb-2">
+                                    眉毛パーマ（ワックス込み）と毛穴ケアを組み合わせたセットメニューです。
+                                    眉の形・毛流れ・肌印象までまとめて整えたい方におすすめです。
+                                </p>
+                                <p className="text-gray-600 text-[10px] md:text-sm">所要時間：約150分</p>
                             </div>
 
                             <div className="border-b pb-6">
-                                <div className="flex items-start gap-4">
-                                    <ImageModal
-                                        src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/menu-wax-design.webp`}
-                                        alt="眉毛ワックスデザインの施術写真"
-                                        width={96}
-                                        height={96}
-                                        className="flex-shrink-0 w-20 h-20 md:w-24 md:h-24 rounded-lg overflow-hidden"
-                                    />
-                                    <div className="flex-1">
-                                        <div className="flex justify-between items-start mb-3">
-                                            <h3 className="font-bold text-sm md:text-xl">眉毛デザイン〈ワックス〉</h3>
-                                            <p className="text-xl md:text-2xl font-bold text-gray-900 ml-4">¥5,000</p>
-                                        </div>
-                                        <p className="text-gray-700 text-[10px] md:text-sm mb-2">
-                                            眉周りのムダ毛をワックスで整え、骨格に合わせて清潔感のある眉に仕上げます。
-                                            ※眉毛のみのシンプルなメニューです
-                                        </p>
-                                        <p className="text-gray-600 text-[10px] md:text-sm">所要時間：約60分</p>
-                                    </div>
+                                <div className="flex justify-between items-start mb-3">
+                                    <h3 className="font-bold text-sm md:text-xl">眉毛デザイン〈ワックス〉</h3>
+                                    <p className="text-xl md:text-2xl font-bold text-gray-900 ml-4">¥5,000</p>
                                 </div>
+                                <p className="text-gray-700 text-[10px] md:text-sm mb-2">
+                                    眉周りのムダ毛をワックスで整え、骨格に合わせて清潔感のある眉に仕上げます。
+                                    ※眉毛のみのシンプルなメニューです
+                                </p>
+                                <p className="text-gray-600 text-[10px] md:text-sm">所要時間：約60分</p>
                             </div>
 
                             <div className="pb-2">
-                                <div className="flex items-start gap-4">
-                                    <ImageModal
-                                        src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/menu-perm-design.webp`}
-                                        alt="眉毛パーマデザインの施術写真"
-                                        width={96}
-                                        height={96}
-                                        className="flex-shrink-0 w-20 h-20 md:w-24 md:h-24 rounded-lg overflow-hidden"
-                                    />
-                                    <div className="flex-1">
-                                        <div className="flex justify-between items-start mb-3">
-                                            <h3 className="font-bold text-sm md:text-xl">
-                                                眉毛デザイン〈パーマ〉※ワックス込み
-                                            </h3>
-                                            <p className="text-xl md:text-2xl font-bold text-gray-900 ml-4">¥6,000</p>
-                                        </div>
-                                        <p className="text-gray-700 text-[10px] md:text-sm mb-2">
-                                            眉毛の生えグセを整えるパーマ施術です。
-                                            ワックス処理込みで、毎日のスタイリングが楽になります。
-                                            ※眉毛のみのシンプルなメニューです。
-                                        </p>
-                                        <p className="text-gray-600 text-[10px] md:text-sm">所要時間：約90分</p>
-                                    </div>
+                                <div className="flex justify-between items-start mb-3">
+                                    <h3 className="font-bold text-sm md:text-xl">
+                                        眉毛デザイン〈パーマ〉※ワックス込み
+                                    </h3>
+                                    <p className="text-xl md:text-2xl font-bold text-gray-900 ml-4">¥6,000</p>
                                 </div>
+                                <p className="text-gray-700 text-[10px] md:text-sm mb-2">
+                                    眉毛の生えグセを整えるパーマ施術です。
+                                    ワックス処理込みで、毎日のスタイリングが楽になります。
+                                    ※眉毛のみのシンプルなメニューです。
+                                </p>
+                                <p className="text-gray-600 text-[10px] md:text-sm">所要時間：約90分</p>
                             </div>
                         </div>
                     </div>
