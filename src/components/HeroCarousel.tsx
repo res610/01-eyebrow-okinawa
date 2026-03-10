@@ -134,42 +134,18 @@ export default function HeroCarousel() {
                         </div>
                     </div>
 
-                    {/* スライド3: マスコット + トピック文言 */}
+                    {/* スライド3: 施術写真フルブリード */}
                     <div
-                        className="w-full flex-shrink-0 py-12 md:py-20"
+                        className="w-full flex-shrink-0"
                         aria-label="スライド 3 / 3"
                     >
-                        <div className="max-w-4xl mx-auto px-4">
-                            <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10">
-                                <div className="w-48 h-48 md:w-64 md:h-64 flex-shrink-0">
-                                    <Image
-                                        src={`${basePath}/images/kodawari-grooming.webp`}
-                                        alt="こだわりのグルーミング"
-                                        width={256}
-                                        height={256}
-                                        className="w-full h-full object-cover rounded-lg"
-                                    />
-                                </div>
-                                <div className="text-center md:text-left">
-                                    <p className="text-sm tracking-widest text-brand-light mb-2">CAMPAIGN</p>
-                                    <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand mb-4 leading-tight">
-                                        初回限定トライアル<br />
-                                        <span className="text-xl sm:text-2xl md:text-3xl">1,000円OFF</span>
-                                    </p>
-                                    <p className="text-base sm:text-lg text-gray-600 mb-6">
-                                        眉毛パーマ×毛穴洗浄・眉毛ワックス×毛穴洗浄が<br className="hidden sm:inline" />
-                                        初回限定でお得にお試しいただけます
-                                    </p>
-                                    <a
-                                        href="https://tol-app.jp/s/ah63epbbc2ejsctgvpzm"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="inline-block bg-yellow-400 text-gray-900 px-6 py-3 md:px-8 md:py-4 rounded-lg text-base md:text-lg font-bold hover:bg-yellow-300 transition-colors min-h-[44px] w-full sm:w-auto text-center"
-                                    >
-                                        初回トライアルを予約する
-                                    </a>
-                                </div>
-                            </div>
+                        <div className="relative w-full h-[400px] md:h-[500px]">
+                            <Image
+                                src={`${basePath}/images/kodawari-grooming.webp`}
+                                alt="眉毛施術の様子"
+                                fill
+                                className="object-cover"
+                            />
                         </div>
                     </div>
                 </div>
