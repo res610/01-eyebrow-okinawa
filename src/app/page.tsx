@@ -3,7 +3,6 @@ import Footer from '@/components/Footer';
 import HeroCarousel from '@/components/HeroCarousel';
 import CustomerVoices from '@/components/CustomerVoices';
 import LazyGoogleMap from '@/components/LazyGoogleMap';
-import ImageModal from '@/components/ImageModal';
 import InstagramFeed from '@/components/InstagramFeed';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -15,34 +14,6 @@ export default function Home() {
             <main className="min-h-screen">
                 {/* Hero Section - スライドカルーセル */}
                 <HeroCarousel />
-
-                {/* 初回限定キャンペーン Section */}
-                <section className="py-10 md:py-14 bg-gray-900 text-white">
-                    <div className="max-w-md mx-auto px-4">
-                        <div className="text-center mb-6">
-                            <p className="text-sm tracking-widest text-gray-400 mb-2">TRIAL CAMPAIGN</p>
-                            <h2 className="text-2xl md:text-3xl font-bold">初回限定トライアル</h2>
-                        </div>
-                        <ImageModal
-                            src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/campaign-flyer.webp`}
-                            alt="01（O-ONE）初回限定トライアルキャンペーン：眉毛パーマ×毛穴洗浄 通常9,000円→初回8,000円、眉毛ワックス×毛穴洗浄 通常8,000円→初回7,000円。1,000円OFF"
-                            width={595}
-                            height={842}
-                            className="rounded-lg overflow-hidden shadow-lg block"
-                        />
-                        <div className="text-center mt-6">
-                            <a
-                                href="https://tol-app.jp/s/ah63epbbc2ejsctgvpzm"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-block bg-yellow-400 text-gray-900 px-8 py-3 md:py-4 rounded-lg text-base md:text-lg font-bold hover:bg-yellow-300 transition-colors min-h-[44px] w-full sm:w-auto text-center"
-                            >
-                                初回トライアルを予約する
-                            </a>
-                            <p className="text-xs text-gray-400 mt-3">※初めてご来店の方限定・毛穴ケア付きセットメニュー対象</p>
-                        </div>
-                    </div>
-                </section>
 
                 {/* About Section - Hitomi紹介 */}
                 <section className="py-12 md:py-16 bg-white">

@@ -2,9 +2,10 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react';
 import Image from 'next/image';
+import ImageModal from '@/components/ImageModal';
 import { HERO_SLIDE_INTERVAL_MS } from '@/constants';
 
-const SLIDE_COUNT = 3;
+const SLIDE_COUNT = 4;
 const SWIPE_THRESHOLD = 50;
 
 export default function HeroCarousel() {
@@ -70,11 +71,11 @@ export default function HeroCarousel() {
                 >
                     {/* スライド1: 現在のヒーロー */}
                     <div
-                        className="w-full flex-shrink-0 py-12 md:py-20"
-                        aria-label="スライド 1 / 3"
+                        className="w-full flex-shrink-0 h-[calc(100svh-4rem)]"
+                        aria-label="スライド 1 / 4"
                     >
-                        <div className="max-w-7xl mx-auto px-4">
-                            <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12">
+                        <div className="max-w-7xl mx-auto px-4 h-full">
+                            <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 h-full">
                                 <div className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 flex-shrink-0">
                                     <Image
                                         src={`${basePath}/images/menu-icon.webp`}
@@ -108,11 +109,11 @@ export default function HeroCarousel() {
 
                     {/* スライド2: 動画プレースホルダー */}
                     <div
-                        className="w-full flex-shrink-0 py-12 md:py-20"
-                        aria-label="スライド 2 / 3"
+                        className="w-full flex-shrink-0 h-[calc(100svh-4rem)]"
+                        aria-label="スライド 2 / 4"
                     >
-                        <div className="max-w-4xl mx-auto px-4">
-                            <div className="flex flex-col items-center justify-center text-center gap-6">
+                        <div className="max-w-4xl mx-auto px-4 h-full">
+                            <div className="flex flex-col items-center justify-center text-center gap-6 h-full">
                                 <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-brand/10 flex items-center justify-center">
                                     <svg
                                         className="w-12 h-12 md:w-16 md:h-16 text-brand"
@@ -134,18 +135,68 @@ export default function HeroCarousel() {
                         </div>
                     </div>
 
-                    {/* スライド3: 施術写真フルブリード */}
+                    {/* スライド3: 施術写真フルブリード + テキストオーバーレイ */}
                     <div
-                        className="w-full flex-shrink-0"
-                        aria-label="スライド 3 / 3"
+                        className="w-full flex-shrink-0 h-[calc(100svh-4rem)]"
+                        aria-label="スライド 3 / 4"
                     >
-                        <div className="relative w-full h-[400px] md:h-[500px]">
+                        <div className="relative w-full h-full">
                             <Image
                                 src={`${basePath}/images/kodawari-grooming.webp`}
                                 alt="眉毛施術の様子"
                                 fill
                                 className="object-cover"
                             />
+                            <div className="absolute inset-0 bg-black/40" />
+                            <div className="absolute inset-0 flex items-center justify-center">
+                                <div className="text-center text-white px-4">
+                                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-wide mb-3 md:mb-4">
+                                        EYEBROW STYLING<br />FOR MEN OKINAWA
+                                    </h2>
+                                    <p className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6">
+                                        01（O-ONE）
+                                    </p>
+                                    <p className="text-sm sm:text-base md:text-lg tracking-wider">
+                                        沖縄県那覇市おもろまち
+                                    </p>
+                                    <p className="text-sm sm:text-base md:text-lg tracking-wider">
+                                        メンズ専門眉毛ワックスサロン
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* スライド4: 初回限定トライアル */}
+                    <div
+                        className="w-full flex-shrink-0 h-[calc(100svh-4rem)]"
+                        aria-label="スライド 4 / 4"
+                    >
+                        <div className="bg-gray-900 text-white h-full flex items-center justify-center">
+                            <div className="max-w-md mx-auto px-4">
+                                <div className="text-center mb-6">
+                                    <p className="text-sm tracking-widest text-gray-400 mb-2">TRIAL CAMPAIGN</p>
+                                    <h2 className="text-2xl md:text-3xl font-bold">初回限定トライアル</h2>
+                                </div>
+                                <ImageModal
+                                    src={`${basePath}/images/campaign-flyer.webp`}
+                                    alt="01（O-ONE）初回限定トライアルキャンペーン：眉毛パーマ×毛穴洗浄 通常9,000円→初回8,000円、眉毛ワックス×毛穴洗浄 通常8,000円→初回7,000円。1,000円OFF"
+                                    width={595}
+                                    height={842}
+                                    className="rounded-lg overflow-hidden shadow-lg block"
+                                />
+                                <div className="text-center mt-6">
+                                    <a
+                                        href="https://tol-app.jp/s/ah63epbbc2ejsctgvpzm"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-block bg-yellow-400 text-gray-900 px-8 py-3 md:py-4 rounded-lg text-base md:text-lg font-bold hover:bg-yellow-300 transition-colors min-h-[44px] w-full sm:w-auto text-center"
+                                    >
+                                        初回トライアルを予約する
+                                    </a>
+                                    <p className="text-xs text-gray-400 mt-3">※初めてご来店の方限定・毛穴ケア付きセットメニュー対象</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
