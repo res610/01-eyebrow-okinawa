@@ -173,11 +173,7 @@ export default function HeroCarousel() {
                         aria-label="スライド 4 / 4"
                     >
                         <div className="bg-gray-900 text-white h-full flex items-center justify-center">
-                            <div className="max-w-md mx-auto px-4">
-                                <div className="text-center mb-6">
-                                    <p className="text-sm tracking-widest text-gray-400 mb-2">TRIAL CAMPAIGN</p>
-                                    <h2 className="text-2xl md:text-3xl font-bold">初回限定トライアル</h2>
-                                </div>
+                            <div className="max-w-sm mx-auto px-4">
                                 <ImageModal
                                     src={`${basePath}/images/campaign-flyer.webp`}
                                     alt="01（O-ONE）初回限定トライアルキャンペーン：眉毛パーマ×毛穴洗浄 通常9,000円→初回8,000円、眉毛ワックス×毛穴洗浄 通常8,000円→初回7,000円。1,000円OFF"
