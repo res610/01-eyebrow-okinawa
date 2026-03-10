@@ -76,7 +76,7 @@ export default function HeroCarousel() {
                     >
                         <div className="relative w-full h-full">
                             <Image
-                                src={`${basePath}/images/kodawari-grooming.webp`}
+                                src={`${basePath}/images/hero-eyebrow-styling.webp`}
                                 alt="眉毛施術の様子"
                                 fill
                                 className="object-cover"
