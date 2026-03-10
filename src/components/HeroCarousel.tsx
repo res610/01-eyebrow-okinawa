@@ -74,23 +74,24 @@ export default function HeroCarousel() {
                         className="w-full flex-shrink-0 h-[calc(100svh-4rem)]"
                         aria-label="スライド 1 / 4"
                     >
-                        <div className="relative w-full h-full">
-                            <Image
-                                src={`${basePath}/images/hero-eyebrow-styling.webp`}
-                                alt="眉毛施術の様子"
-                                fill
-                                className="object-cover"
-                                priority
-                            />
-                            <div className="absolute inset-0 bg-black/40" />
+                        <div className="relative w-full h-full py-8 md:py-12">
+                            <div className="relative w-full h-full rounded-lg overflow-hidden mx-auto max-w-6xl">
+                                <Image
+                                    src={`${basePath}/images/hero-eyebrow-styling.webp`}
+                                    alt="眉毛施術の様子"
+                                    fill
+                                    className="object-cover"
+                                    priority
+                                />
+                                <div className="absolute inset-0 bg-white/65" />
                             <div className="absolute inset-0 flex items-center justify-center">
-                                <div className="text-center text-white px-4">
-                                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-wide mb-3 md:mb-4">
-                                        EYEBROW STYLING<br />FOR MEN OKINAWA
-                                    </h1>
+                                <div className="text-center text-brand px-4">
                                     <p className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6">
                                         01（O-ONE）
                                     </p>
+                                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-wide mb-3 md:mb-4">
+                                        EYEBROW STYLING<br />FOR MEN OKINAWA
+                                    </h1>
                                     <p className="text-sm sm:text-base md:text-lg tracking-wider">
                                         沖縄県那覇市おもろまち
                                     </p>
@@ -98,6 +99,7 @@ export default function HeroCarousel() {
                                         メンズ専門眉毛ワックスサロン
                                     </p>
                                 </div>
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -173,7 +175,7 @@ export default function HeroCarousel() {
                         aria-label="スライド 4 / 4"
                     >
                         <div className="bg-gray-900 text-white h-full flex items-center justify-center">
-                            <div className="max-w-sm mx-auto px-4">
+                            <div className="max-w-xs md:max-w-sm mx-auto px-4">
                                 <ImageModal
                                     src={`${basePath}/images/campaign-flyer.webp`}
                                     alt="01（O-ONE）初回限定トライアルキャンペーン：眉毛パーマ×毛穴洗浄 通常9,000円→初回8,000円、眉毛ワックス×毛穴洗浄 通常8,000円→初回7,000円。1,000円OFF"
@@ -181,7 +183,7 @@ export default function HeroCarousel() {
                                     height={842}
                                     className="rounded-lg overflow-hidden shadow-lg block"
                                 />
-                                <div className="text-center mt-6">
+                                <div className="text-center mt-3 md:mt-6">
                                     <a
                                         href="https://tol-app.jp/s/ah63epbbc2ejsctgvpzm"
                                         target="_blank"
