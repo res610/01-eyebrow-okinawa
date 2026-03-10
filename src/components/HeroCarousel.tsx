@@ -141,13 +141,13 @@ export default function HeroCarousel() {
                     >
                         <div className="max-w-4xl mx-auto px-4">
                             <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10">
-                                <div className="w-36 h-36 md:w-48 md:h-48 flex-shrink-0">
+                                <div className="w-48 h-48 md:w-64 md:h-64 flex-shrink-0">
                                     <Image
-                                        src={`${basePath}/images/mascot-flying-right.webp`}
-                                        alt="01マスコットキャラクター"
-                                        width={192}
-                                        height={192}
-                                        className="w-full h-full object-contain"
+                                        src={`${basePath}/images/kodawari-grooming.webp`}
+                                        alt="こだわりのグルーミング"
+                                        width={256}
+                                        height={256}
+                                        className="w-full h-full object-cover rounded-lg"
                                     />
                                 </div>
                                 <div className="text-center md:text-left">
