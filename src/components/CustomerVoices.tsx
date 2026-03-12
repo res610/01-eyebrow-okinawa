@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { useState, useRef, useCallback, useEffect } from 'react';
-import { VOICE_IMAGES_COUNT, EAGER_LOADING_COUNT, SCROLL_PERCENTAGE } from '@/constants';
+import { VOICE_IMAGES_COUNT, EAGER_LOADING_COUNT } from '@/constants';
 
 const voiceImages = Array.from({ length: VOICE_IMAGES_COUNT }, (_, i) => ({
     src: `${process.env.NEXT_PUBLIC_BASE_PATH}/images/voices/voice-${String(i + 1).padStart(2, '0')}.webp`,
@@ -10,6 +10,7 @@ const voiceImages = Array.from({ length: VOICE_IMAGES_COUNT }, (_, i) => ({
 }));
 
 export default function CustomerVoices() {
+    const [currentIndex, setCurrentIndex] = useState(0);
     const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
     const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -24,7 +25,7 @@ export default function CustomerVoices() {
         setLightboxIndex((prev) => (prev !== null && prev < voiceImages.length - 1 ? prev + 1 : 0));
     }, []);
 
-    // キーボード操作
+    // キーボード操作（ライトボックス）
     useEffect(() => {
         if (lightboxIndex === null) return;
         const handleKeyDown = (e: KeyboardEvent) => {
@@ -40,14 +41,41 @@ export default function CustomerVoices() {
         };
     }, [lightboxIndex, goToPrev, goToNext]);
 
-    const scroll = (direction: 'left' | 'right') => {
+    // スクロール位置からアクティブなカードを検出
+    const handleScroll = useCallback(() => {
         if (!scrollRef.current) return;
-        const scrollAmount = scrollRef.current.clientWidth * SCROLL_PERCENTAGE;
-        scrollRef.current.scrollBy({
-            left: direction === 'left' ? -scrollAmount : scrollAmount,
-            behavior: 'smooth',
+        const container = scrollRef.current;
+        const scrollCenter = container.scrollLeft + container.clientWidth / 2;
+        let closest = 0;
+        let closestDist = Infinity;
+        Array.from(container.children).forEach((child, i) => {
+            const el = child as HTMLElement;
+            const dist = Math.abs(el.offsetLeft + el.offsetWidth / 2 - scrollCenter);
+            if (dist < closestDist) {
+                closestDist = dist;
+                closest = i;
+            }
         });
-    };
+        setCurrentIndex(closest);
+    }, []);
+
+    useEffect(() => {
+        const el = scrollRef.current;
+        if (!el) return;
+        el.addEventListener('scroll', handleScroll, { passive: true });
+        return () => el.removeEventListener('scroll', handleScroll);
+    }, [handleScroll]);
+
+    // ドットクリックで指定カードへスクロール
+    const scrollToIndex = useCallback((index: number) => {
+        if (!scrollRef.current) return;
+        const cards = Array.from(scrollRef.current.children) as HTMLElement[];
+        if (!cards[index]) return;
+        const container = scrollRef.current;
+        const card = cards[index];
+        const scrollLeft = card.offsetLeft - (container.clientWidth - card.offsetWidth) / 2;
+        container.scrollTo({ left: scrollLeft, behavior: 'smooth' });
+    }, []);
 
     return (
         <>
@@ -60,23 +88,16 @@ export default function CustomerVoices() {
                         <p className="text-sm tracking-widest text-brand-light">CUSTOMER VOICE</p>
                     </div>
 
-                    {/* スライドショー */}
-                    <div className="relative">
-                        {/* 左矢印 */}
-                        <button
-                            onClick={() => scroll('left')}
-                            className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 w-10 h-10 bg-white rounded-full shadow-lg items-center justify-center hover:bg-gray-50 transition-colors"
-                            aria-label="前へ"
-                        >
-                            <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                            </svg>
-                        </button>
+                    {/* リード文 */}
+                    <p className="text-center text-sm md:text-base text-gray-500 leading-relaxed mb-8">
+                        多くのお客様から<br className="md:hidden" />喜びの声をいただいています
+                    </p>
 
-                        {/* スクロールコンテナ */}
+                    {/* カルーセル SP: 全幅、PC: 中央寄せ600px */}
+                    <div className="relative -mx-4 overflow-hidden md:mx-auto md:max-w-[600px]">
                         <div
                             ref={scrollRef}
-                            className="flex gap-3 md:gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4 -mx-4 px-4 md:mx-0 md:px-0"
+                            className="flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-2"
                             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
                         >
                             <style>{`div::-webkit-scrollbar { display: none; }`}</style>
@@ -84,34 +105,36 @@ export default function CustomerVoices() {
                                 <button
                                     key={index}
                                     onClick={() => openLightbox(index)}
-                                    className="flex-shrink-0 snap-start w-[calc((100vw-3.5rem)/3)] md:w-56 aspect-square rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow cursor-pointer bg-gray-100"
+                                    className="flex-shrink-0 snap-center aspect-[3/2] rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow cursor-pointer bg-gray-100
+                                        w-[80vw] first:ml-[10vw] last:mr-[10vw]
+                                        md:w-[500px] md:first:ml-[50px] md:last:mr-[50px]"
                                 >
                                     <Image
                                         src={image.src}
                                         alt={image.alt}
-                                        width={224}
-                                        height={288}
+                                        width={500}
+                                        height={333}
                                         className="w-full h-full object-contain"
                                         loading={index < EAGER_LOADING_COUNT ? 'eager' : 'lazy'}
                                     />
                                 </button>
                             ))}
                         </div>
-
-                        {/* 右矢印 */}
-                        <button
-                            onClick={() => scroll('right')}
-                            className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 w-10 h-10 bg-white rounded-full shadow-lg items-center justify-center hover:bg-gray-50 transition-colors"
-                            aria-label="次へ"
-                        >
-                            <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                            </svg>
-                        </button>
                     </div>
 
-                    {/* スクロールヒント（モバイル） */}
-                    <p className="text-center text-xs text-gray-400 mt-2 md:hidden">← スワイプして閲覧 →</p>
+                    {/* ドット（SP・PC共通） */}
+                    <div className="flex justify-center gap-1.5 mt-4">
+                        {voiceImages.map((_, i) => (
+                            <button
+                                key={i}
+                                onClick={() => scrollToIndex(i)}
+                                className={`h-1.5 rounded-full transition-all duration-300 ${
+                                    i === currentIndex ? 'w-5 bg-brand' : 'w-1.5 bg-gray-300'
+                                }`}
+                                aria-label={`${i + 1}枚目`}
+                            />
+                        ))}
+                    </div>
                 </div>
             </section>
 

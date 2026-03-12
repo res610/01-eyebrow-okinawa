@@ -1,9 +1,8 @@
 'use client';
 
 import Image from 'next/image';
-import { useRef } from 'react';
 import instagramData from '@/data/instagram.json';
-import { INSTAGRAM_POST_COUNT, SCROLL_PERCENTAGE } from '@/constants';
+import { INSTAGRAM_POST_COUNT } from '@/constants';
 
 interface InstagramPost {
     id: string;
@@ -17,16 +16,6 @@ interface InstagramPost {
 export default function InstagramFeed() {
     const posts: InstagramPost[] = instagramData.posts ?? [];
     const displayPosts = posts.slice(0, INSTAGRAM_POST_COUNT);
-    const scrollRef = useRef<HTMLDivElement>(null);
-
-    const scroll = (direction: 'left' | 'right') => {
-        if (!scrollRef.current) return;
-        const scrollAmount = scrollRef.current.clientWidth * SCROLL_PERCENTAGE;
-        scrollRef.current.scrollBy({
-            left: direction === 'left' ? -scrollAmount : scrollAmount,
-            behavior: 'smooth',
-        });
-    };
 
     return (
         <section className="py-12 md:py-16 bg-white">
@@ -40,45 +29,46 @@ export default function InstagramFeed() {
                 </div>
 
                 {displayPosts.length > 0 ? (
-                    <div className="relative">
-                        {/* 左矢印 */}
-                        <button
-                            onClick={() => scroll('left')}
-                            className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 w-10 h-10 bg-white rounded-full shadow-lg items-center justify-center hover:bg-gray-50 transition-colors"
-                            aria-label="前へ"
-                        >
-                            <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                            </svg>
-                        </button>
-
-                        {/* スクロールコンテナ */}
+                    <div className="overflow-hidden -mx-4 md:-mx-8 py-6">
+                        <style>{`
+                            @keyframes marquee {
+                                0% { transform: translateX(0); }
+                                100% { transform: translateX(-50%); }
+                            }
+                            .marquee-track {
+                                animation: marquee 22s linear infinite;
+                            }
+                            .marquee-track:hover {
+                                animation-play-state: paused;
+                            }
+                        `}</style>
+                        {/* 2セット複製でシームレスループ */}
                         <div
-                            ref={scrollRef}
-                            className="flex gap-3 md:gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4 -mx-4 px-4 md:mx-0 md:px-0"
-                            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+                            className="marquee-track flex gap-3 md:gap-4"
+                            style={{ width: 'max-content' }}
                         >
-                            <style>{`div::-webkit-scrollbar { display: none; }`}</style>
-                            {displayPosts.map((post) => (
+                            {[...displayPosts, ...displayPosts].map((post, index) => (
                                 <a
-                                    key={post.id}
+                                    key={`${post.id}-${index}`}
                                     href={post.permalink}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="group flex-shrink-0 snap-start w-[calc((100vw-3.5rem)/3)] md:w-56 aspect-square rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow bg-gray-100 relative"
+                                    className={`group flex-shrink-0 w-32 md:w-44 aspect-square rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 bg-gray-100 relative ${
+                                        index % 2 === 0 ? '-translate-y-3' : 'translate-y-3'
+                                    }`}
                                 >
                                     <Image
                                         src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/${post.localImage}`}
                                         alt={post.caption || 'Instagram投稿'}
-                                        width={224}
-                                        height={224}
+                                        width={176}
+                                        height={176}
                                         className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                                         loading="lazy"
                                     />
                                     {/* Hover overlay */}
                                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center">
                                         <svg
-                                            className="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                                            className="w-7 h-7 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                                             fill="currentColor"
                                             viewBox="0 0 24 24"
                                         >
@@ -100,17 +90,6 @@ export default function InstagramFeed() {
                                 </a>
                             ))}
                         </div>
-
-                        {/* 右矢印 */}
-                        <button
-                            onClick={() => scroll('right')}
-                            className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 w-10 h-10 bg-white rounded-full shadow-lg items-center justify-center hover:bg-gray-50 transition-colors"
-                            aria-label="次へ"
-                        >
-                            <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                            </svg>
-                        </button>
                     </div>
                 ) : (
                     <div className="text-center py-8">
@@ -125,11 +104,6 @@ export default function InstagramFeed() {
                             Instagramの最新投稿を準備中です
                         </p>
                     </div>
-                )}
-
-                {/* スクロールヒント（モバイル） */}
-                {displayPosts.length > 0 && (
-                    <p className="text-center text-xs text-gray-400 mt-2 md:hidden">← スワイプして閲覧 →</p>
                 )}
 
                 <div className="text-center mt-6">
