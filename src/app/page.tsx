@@ -15,48 +15,6 @@ export default function Home() {
                 {/* Hero Section - スライドカルーセル */}
                 <HeroCarousel />
 
-                {/* Instagram Section */}
-                <InstagramFeed />
-
-                {/* ビフォーアフター Section */}
-                <section className="py-12 md:py-16 bg-white">
-                    <div className="max-w-4xl mx-auto px-4">
-                        <div className="text-center mb-10 md:mb-14">
-                            <h2 className="text-2xl md:text-3xl font-bold tracking-widest mb-2 text-brand">施術後のビフォーアフター</h2>
-                            <div className="w-48 h-0.5 bg-brand mx-auto mb-2"></div>
-                            <p className="text-sm tracking-widest text-brand-light">BEFORE &amp; AFTER</p>
-                        </div>
-                        <p className="text-sm md:text-base text-gray-600 text-center mb-8 leading-relaxed">
-                            眉毛ワックスや眉毛パーマで、<br className="hidden md:inline" />
-                            お顔の印象がどのように変わるかご覧ください。
-                        </p>
-                        <div className="space-y-6">
-                            {/* 施術イメージ ビフォーアフター */}
-                            <div className="max-w-md mx-auto rounded-lg overflow-hidden shadow-lg">
-                                <Image
-                                    src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/before-after-real.jpg`}
-                                    alt="沖縄・那覇メンズ眉毛サロン01（O-ONE）の眉毛ワックス施術イメージ：施術前と施術後のビフォーアフター比較。骨格に合わせて眉を整え、清潔感のある印象に"
-                                    width={800}
-                                    height={1200}
-                                    className="w-full"
-                                />
-                            </div>
-                            <div className="max-w-lg mx-auto text-center space-y-3">
-                                <p className="text-base md:text-lg font-medium text-gray-800 leading-relaxed">
-                                    余分な毛を丁寧に取り除き、<br className="md:hidden" />眉の輪郭をシャープに整えました。
-                                </p>
-                                <p className="text-sm md:text-base text-gray-600 leading-relaxed">
-                                    毛流れを活かしながら骨格に合った眉ラインをデザインすることで、<br className="hidden md:inline" />
-                                    目元がすっきりと引き締まり、清潔感のある印象に仕上がります。
-                                </p>
-                                <p className="text-xs text-gray-500">
-                                    ※効果には個人差があります。お客様の骨格・毛質に合わせて最適なデザインをご提案します。
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
                 {/* About Section - Hitomi紹介 */}
                 <section className="py-12 md:py-16 bg-white">
                     <div className="max-w-4xl mx-auto px-4">
@@ -100,6 +58,48 @@ export default function Home() {
                         </div>
                     </div>
                 </section>
+
+                {/* ビフォーアフター Section */}
+                <section className="py-12 md:py-16 bg-white">
+                    <div className="max-w-4xl mx-auto px-4">
+                        <div className="text-center mb-10 md:mb-14">
+                            <h2 className="text-2xl md:text-3xl font-bold tracking-widest mb-2 text-brand">施術後のビフォーアフター</h2>
+                            <div className="w-48 h-0.5 bg-brand mx-auto mb-2"></div>
+                            <p className="text-sm tracking-widest text-brand-light">BEFORE &amp; AFTER</p>
+                        </div>
+                        <p className="text-sm md:text-base text-gray-600 text-center mb-8 leading-relaxed">
+                            眉毛ワックスや眉毛パーマで、<br className="hidden md:inline" />
+                            お顔の印象がどのように変わるかご覧ください。
+                        </p>
+                        <div className="space-y-6">
+                            {/* 施術イメージ ビフォーアフター */}
+                            <div className="max-w-md mx-auto rounded-lg overflow-hidden shadow-lg">
+                                <Image
+                                    src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/before-after-real.jpg`}
+                                    alt="沖縄・那覇メンズ眉毛サロン01（O-ONE）の眉毛ワックス施術イメージ：施術前と施術後のビフォーアフター比較。骨格に合わせて眉を整え、清潔感のある印象に"
+                                    width={800}
+                                    height={1200}
+                                    className="w-full"
+                                />
+                            </div>
+                            <div className="max-w-lg mx-auto text-center space-y-3">
+                                <p className="text-base md:text-lg font-medium text-gray-800 leading-relaxed">
+                                    余分な毛を丁寧に取り除き、<br className="md:hidden" />眉の輪郭をシャープに整えました。
+                                </p>
+                                <p className="text-sm md:text-base text-gray-600 leading-relaxed">
+                                    毛流れを活かしながら骨格に合った眉ラインをデザインすることで、<br className="hidden md:inline" />
+                                    目元がすっきりと引き締まり、清潔感のある印象に仕上がります。
+                                </p>
+                                <p className="text-xs text-gray-500">
+                                    ※効果には個人差があります。お客様の骨格・毛質に合わせて最適なデザインをご提案します。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Instagram Section - 最新の施術・お知らせ */}
+                <InstagramFeed />
 
                 {/* 01が選ばれる3つの理由 Section */}
                 <section className="py-12 md:py-16 bg-gray-50">

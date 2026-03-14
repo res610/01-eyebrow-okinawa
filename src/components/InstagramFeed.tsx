@@ -22,10 +22,10 @@ export default function InstagramFeed() {
             <div className="max-w-7xl mx-auto px-4">
                 <div className="text-center mb-10 md:mb-14">
                     <h2 className="text-2xl md:text-3xl font-bold tracking-widest mb-2 text-brand">
-                        Instagram
+                        最新の施術・お知らせ
                     </h2>
                     <div className="w-48 h-0.5 bg-brand mx-auto mb-2"></div>
-                    <p className="text-sm tracking-widest text-brand-light">FOLLOW US</p>
+                    <p className="text-sm tracking-widest text-brand-light">LATEST UPDATES</p>
                 </div>
 
                 {displayPosts.length > 0 ? (
