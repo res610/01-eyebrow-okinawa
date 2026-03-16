@@ -7,7 +7,7 @@ export const MAP_ZOOM_LEVEL = 15;
 export const INSTAGRAM_POST_COUNT = 9;
 
 // Hero Carousel
-export const HERO_SLIDE_INTERVAL_MS = 5000;
+export const HERO_SLIDE_INTERVAL_MS = 15000;
 
 // お客様の声
 export const VOICE_IMAGES_COUNT = 20;

@@ -1,11 +1,10 @@
 'use client';
 
 import { useState, useEffect, useRef, useCallback } from 'react';
-import Image from 'next/image';
 import ImageModal from '@/components/ImageModal';
 import { HERO_SLIDE_INTERVAL_MS } from '@/constants';
 
-const SLIDE_COUNT = 4;
+const SLIDE_COUNT = 2;
 const SWIPE_THRESHOLD = 50;
 
 export default function HeroCarousel() {
@@ -69,110 +68,46 @@ export default function HeroCarousel() {
                     className="flex transition-transform duration-500 ease-in-out"
                     style={{ transform: `translateX(-${current * 100}%)` }}
                 >
-                    {/* スライド1: 施術写真フルブリード + テキストオーバーレイ */}
+                    {/* スライド1: サロン雰囲気動画 */}
                     <div
                         className="w-full flex-shrink-0 h-[calc(100svh-4rem)]"
-                        aria-label="スライド 1 / 4"
+                        aria-label="スライド 1 / 2"
                     >
                         <div className="relative w-full h-full py-8 md:py-12">
                             <div className="relative w-full h-full rounded-lg overflow-hidden mx-auto max-w-6xl">
-                                <Image
-                                    src={`${basePath}/images/hero-eyebrow-styling.webp`}
-                                    alt="眉毛施術の様子"
-                                    fill
-                                    className="object-cover"
-                                    priority
+                                <video
+                                    src={`${basePath}/videos/salon-atmosphere.mp4`}
+                                    autoPlay
+                                    loop
+                                    muted
+                                    playsInline
+                                    className="absolute inset-0 w-full h-full object-cover"
                                 />
-                                <div className="absolute inset-0 bg-white/65" />
-                            <div className="absolute inset-0 flex items-center justify-center">
-                                <div className="text-center text-brand px-4">
-                                    <p className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6">
-                                        01（O-ONE）
-                                    </p>
-                                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-wide mb-3 md:mb-4">
-                                        EYEBROW STYLING<br />FOR MEN OKINAWA
-                                    </h1>
-                                    <p className="text-sm sm:text-base md:text-lg tracking-wider">
-                                        沖縄県那覇市おもろまち
-                                    </p>
-                                    <p className="text-sm sm:text-base md:text-lg tracking-wider">
-                                        メンズ専門眉毛ワックスサロン
-                                    </p>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* スライド2: 動画プレースホルダー */}
-                    <div
-                        className="w-full flex-shrink-0 h-[calc(100svh-4rem)]"
-                        aria-label="スライド 2 / 4"
-                    >
-                        <div className="max-w-4xl mx-auto px-4 h-full">
-                            <div className="flex flex-col items-center justify-center text-center gap-6 h-full">
-                                <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-brand/10 flex items-center justify-center">
-                                    <svg
-                                        className="w-12 h-12 md:w-16 md:h-16 text-brand"
-                                        fill="currentColor"
-                                        viewBox="0 0 24 24"
-                                    >
-                                        <path d="M8 5v14l11-7z" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <p className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand mb-3">
-                                        Coming Soon
-                                    </p>
-                                    <p className="text-base sm:text-lg text-gray-600">
-                                        サロンの雰囲気をお届けする動画を準備中です
-                                    </p>
+                                <div className="absolute inset-0 bg-white/75" />
+                                <div className="absolute inset-0 flex items-center justify-center">
+                                    <div className="text-center text-brand px-4">
+                                        <p className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6">
+                                            01（O-ONE）
+                                        </p>
+                                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-wide mb-3 md:mb-4">
+                                            EYEBROW STYLING<br />FOR MEN OKINAWA
+                                        </h1>
+                                        <p className="text-sm sm:text-base md:text-lg tracking-wider">
+                                            沖縄県那覇市おもろまち
+                                        </p>
+                                        <p className="text-sm sm:text-base md:text-lg tracking-wider">
+                                            メンズ専門眉毛ワックスサロン
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    {/* スライド3: ロゴ + テキスト */}
+                    {/* スライド2: 初回限定トライアル */}
                     <div
                         className="w-full flex-shrink-0 h-[calc(100svh-4rem)]"
-                        aria-label="スライド 3 / 4"
-                    >
-                        <div className="max-w-7xl mx-auto px-4 h-full">
-                            <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 h-full">
-                                <div className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 flex-shrink-0">
-                                    <Image
-                                        src={`${basePath}/images/menu-icon.webp`}
-                                        alt="01（O-ONE）メンズ眉毛サロン"
-                                        width={192}
-                                        height={192}
-                                        className="w-full h-full object-contain"
-                                    />
-                                </div>
-                                <div className="text-center md:text-left">
-                                    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight text-brand">
-                                        EYEBROW STYLING<br />FOR MEN OKINAWA
-                                    </h2>
-                                    <p className="text-2xl sm:text-3xl mb-3 md:mb-4 font-bold text-brand">01（O-ONE）</p>
-                                    <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 md:mb-8 px-2 md:px-0">
-                                        沖縄県那覇市おもろまちのメンズ専門眉毛ワックスサロン
-                                    </p>
-                                    <a
-                                        href="https://tol-app.jp/s/ah63epbbc2ejsctgvpzm"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="inline-block bg-gray-900 text-white px-6 py-3 md:px-8 md:py-4 rounded-lg text-base md:text-lg hover:bg-gray-800 transition-colors min-h-[44px] w-full sm:w-auto text-center"
-                                    >
-                                        ご予約はこちら
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* スライド4: 初回限定トライアル */}
-                    <div
-                        className="w-full flex-shrink-0 h-[calc(100svh-4rem)]"
-                        aria-label="スライド 4 / 4"
+                        aria-label="スライド 2 / 2"
                     >
                         <div className="bg-gray-900 text-white h-full flex items-center justify-center">
                             <div className="max-w-xs md:max-w-sm mx-auto px-4">
