@@ -71,30 +71,43 @@ export default function Home() {
                             眉毛ワックスや眉毛パーマで、<br className="hidden md:inline" />
                             お顔の印象がどのように変わるかご覧ください。
                         </p>
-                        <div className="space-y-6">
-                            {/* 施術イメージ ビフォーアフター */}
-                            <div className="max-w-md mx-auto rounded-lg overflow-hidden shadow-lg">
-                                <Image
-                                    src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/before-after-real.jpg`}
-                                    alt="沖縄・那覇メンズ眉毛サロン01（O-ONE）の眉毛ワックス施術イメージ：施術前と施術後のビフォーアフター比較。骨格に合わせて眉を整え、清潔感のある印象に"
-                                    width={800}
-                                    height={1200}
-                                    className="w-full"
-                                />
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
+                            {/* 眉毛ワックス */}
+                            <div className="space-y-4">
+                                <h3 className="text-lg md:text-xl font-bold text-center text-brand tracking-wider">眉毛ワックス</h3>
+                                <div className="rounded-lg overflow-hidden shadow-lg">
+                                    <Image
+                                        src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/before-after-real.webp`}
+                                        alt="沖縄・那覇メンズ眉毛サロン01（O-ONE）の眉毛ワックス施術イメージ：施術前と施術後のビフォーアフター比較。骨格に合わせて眉を整え、清潔感のある印象に"
+                                        width={800}
+                                        height={1200}
+                                        className="w-full"
+                                    />
+                                </div>
+                                <p className="text-sm md:text-base text-gray-600 text-center leading-relaxed">
+                                    余分な毛を丁寧に取り除き、眉の輪郭をシャープに整えました。
+                                </p>
                             </div>
-                            <div className="max-w-lg mx-auto text-center space-y-3">
-                                <p className="text-base md:text-lg font-medium text-gray-800 leading-relaxed">
-                                    余分な毛を丁寧に取り除き、<br className="md:hidden" />眉の輪郭をシャープに整えました。
-                                </p>
-                                <p className="text-sm md:text-base text-gray-600 leading-relaxed">
-                                    毛流れを活かしながら骨格に合った眉ラインをデザインすることで、<br className="hidden md:inline" />
-                                    目元がすっきりと引き締まり、清潔感のある印象に仕上がります。
-                                </p>
-                                <p className="text-xs text-gray-500">
-                                    ※効果には個人差があります。お客様の骨格・毛質に合わせて最適なデザインをご提案します。
+                            {/* 眉毛パーマ */}
+                            <div className="space-y-4">
+                                <h3 className="text-lg md:text-xl font-bold text-center text-brand tracking-wider">眉毛パーマ</h3>
+                                <div className="rounded-lg overflow-hidden shadow-lg">
+                                    <Image
+                                        src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/before-after-perm.webp`}
+                                        alt="沖縄・那覇メンズ眉毛サロン01（O-ONE）の眉毛パーマ施術イメージ：施術前と施術後のビフォーアフター比較。毛流れを整え、自然で立体的な眉に"
+                                        width={800}
+                                        height={1200}
+                                        className="w-full"
+                                    />
+                                </div>
+                                <p className="text-sm md:text-base text-gray-600 text-center leading-relaxed">
+                                    毛流れを整え、自然で立体的な眉に仕上げました。
                                 </p>
                             </div>
                         </div>
+                        <p className="text-xs text-gray-500 text-center mt-6">
+                            ※効果には個人差があります。お客様の骨格・毛質に合わせて最適なデザインをご提案します。
+                        </p>
                     </div>
                 </section>
 
