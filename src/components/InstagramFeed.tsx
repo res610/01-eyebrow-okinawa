@@ -44,7 +44,7 @@ export default function InstagramFeed() {
                                 100% { transform: translateX(-50%); }
                             }
                             .marquee-track {
-                                animation: marquee 22s linear infinite;
+                                animation: marquee 36s linear infinite;
                             }
                             .marquee-track:hover {
                                 animation-play-state: paused;

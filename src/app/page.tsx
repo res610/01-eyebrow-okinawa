@@ -30,19 +30,24 @@ export default function Home() {
                             <div className="flex flex-col md:flex-row md:gap-8">
                                 <div className="flex-1">
                                     <p className="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
-                                        こんにちは。アイブロウリストHitomiです。<br />
-                                        この度は当店のWEBサイトをご覧いただきありがとうございます。
+                                        メンズ眉毛サロン「01（オーワン）」のHitomiです！
                                     </p>
                                     <p className="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
-                                        01（O-ONE）は、沖縄県那覇市おもろまちにあるメンズ専用のアイブロウサロンです。<br />
-                                        私はこのお店をオープンする前から、男性の眉毛をスタイリングしていました。<br />
-                                        ありがたいことに、その頃から、「Hitomiさんにやってもらいたい！」と言われることが増えたことをきっかけに、那覇に01（O-ONE）をオープンさせました。
+                                        「眉毛ってこんなに変わるんだ」<br />
+                                        そう驚いていただける瞬間や、<br />
+                                        「もっと早く来ればよかった」と喜んでもらえることがとても嬉しくて、この仕事をしています。
+                                    </p>
+                                    <p className="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
+                                        なんとなく整えるだけじゃなく、<br />
+                                        骨格や雰囲気に合わせた&ldquo;その人に似合う眉毛&rdquo;を一緒に作っていくのがこだわりです。
+                                    </p>
+                                    <p className="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
+                                        女性目線で見ても、眉毛が整っている男性はそれだけで清潔感があって好印象。<br />
+                                        眉毛ひとつで自信が持てたり、周りからの印象がガラッと変わったり。<br />
+                                        そんなきっかけを届けられるサロンでありたいと思っています。
                                     </p>
                                     <p className="text-sm md:text-base leading-relaxed text-gray-700">
-                                        昨今、男性もメイクをする時代。眉毛は整えるだけで印象が変わるものです。<br />
-                                        沖縄でもメンズ眉毛への関心が高まっており、眉毛ワックスや眉毛パーマで身だしなみを整える男性が増えています。<br />
-                                        当店では、お客様のお顔立ちを拝見させていただき、ベストな眉に仕上げてまいります。<br />
-                                        誰でも親しみやすい空間作りを心がけているので、ぜひお気軽にお越しください。
+                                        初めての方もリラックスしてお越しください😊
                                     </p>
                                 </div>
                                 <div className="flex justify-center mt-6 md:mt-0 md:flex-shrink-0 md:self-center">
@@ -107,6 +112,36 @@ export default function Home() {
                         </div>
                         <p className="text-xs text-gray-500 text-center mt-6">
                             ※効果には個人差があります。お客様の骨格・毛質に合わせて最適なデザインをご提案します。
+                        </p>
+                    </div>
+                </section>
+
+                {/* こんな方におすすめ Section */}
+                <section className="py-12 md:py-16 bg-gray-50">
+                    <div className="max-w-4xl mx-auto px-4">
+                        <div className="text-center mb-10 md:mb-14">
+                            <h2 className="text-2xl md:text-3xl font-bold tracking-widest mb-2 text-brand">こんな方におすすめ</h2>
+                            <div className="w-48 h-0.5 bg-brand mx-auto mb-2"></div>
+                            <p className="text-sm tracking-widest text-brand-light">RECOMMENDED</p>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 max-w-2xl mx-auto">
+                            {[
+                                '眉毛の左右差が気になる',
+                                '自分に似合う眉の形が分からない',
+                                '眉毛の整え方が分からない',
+                                '濃さやぼさぼさ感が気になる',
+                                '垢抜けた印象になりたい',
+                                '第一印象を良くしたい',
+                                '女性からの印象を良くしたい',
+                            ].map((item) => (
+                                <div key={item} className="flex items-center gap-3 bg-white rounded-lg p-4 shadow-sm">
+                                    <span className="text-brand text-lg flex-shrink-0">✔</span>
+                                    <p className="text-sm md:text-base text-gray-700">{item}</p>
+                                </div>
+                            ))}
+                        </div>
+                        <p className="text-sm md:text-base text-gray-600 text-center mt-8 leading-relaxed">
+                            一つでも当てはまる方は、ぜひお気軽にご相談ください。
                         </p>
                     </div>
                 </section>
