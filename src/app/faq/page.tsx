@@ -5,14 +5,14 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: 'よくあるご質問',
-    description: '沖縄・那覇のメンズ眉毛サロン01（O-ONE）のよくあるご質問。眉毛ワックスの痛み、施術時間、来店頻度など、メンズ眉毛施術に関するQ&Aをご紹介。',
+    description: '沖縄・那覇のメンズ眉毛サロン01（オーワン）のよくあるご質問。眉毛ワックスの痛み、施術時間、来店頻度など、メンズ眉毛施術に関するQ&Aをご紹介。',
     keywords: ['眉毛ワックス 痛み', 'メンズ眉毛 施術時間', '眉毛サロン 頻度', '眉毛 Q&A'],
     alternates: {
         canonical: '/faq/',
     },
     openGraph: {
-        title: 'よくあるご質問 | 01（O-ONE）沖縄メンズ眉毛サロン',
-        description: '沖縄・那覇のメンズ眉毛サロン01（O-ONE）のよくあるご質問。眉毛ワックスに関するQ&Aをご紹介。',
+        title: 'よくあるご質問 | 01（オーワン）沖縄メンズ眉毛サロン',
+        description: '沖縄・那覇のメンズ眉毛サロン01（オーワン）のよくあるご質問。眉毛ワックスに関するQ&Aをご紹介。',
     },
 };
 
@@ -128,7 +128,7 @@ export default function FaqPage() {
                     </div>
 
                     <p className="text-sm md:text-base text-gray-600 text-center mb-8 leading-relaxed">
-                        沖縄・那覇のメンズ眉毛サロン01（O-ONE）に寄せられる、よくあるご質問をまとめました。<br className="hidden md:inline" />
+                        沖縄・那覇のメンズ眉毛サロン01（オーワン）に寄せられる、よくあるご質問をまとめました。<br className="hidden md:inline" />
                         眉毛ワックスや眉毛パーマの施術について、初めての方もぜひご参考ください。
                     </p>
 

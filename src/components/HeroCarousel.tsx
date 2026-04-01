@@ -87,7 +87,7 @@ export default function HeroCarousel() {
                                 <div className="absolute inset-0 flex items-center justify-center">
                                     <div className="text-center text-brand px-4">
                                         <p className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6">
-                                            01（O-ONE）
+                                            01（オーワン）
                                         </p>
                                         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-wide mb-3 md:mb-4">
                                             EYEBROW STYLING<br />FOR MEN OKINAWA
@@ -113,7 +113,7 @@ export default function HeroCarousel() {
                             <div className="max-w-xs md:max-w-sm mx-auto px-4">
                                 <ImageModal
                                     src={`${basePath}/images/campaign-flyer.webp`}
-                                    alt="01（O-ONE）初回限定トライアルキャンペーン：眉毛パーマ×毛穴洗浄 通常9,000円→初回8,000円、眉毛ワックス×毛穴洗浄 通常8,000円→初回7,000円。1,000円OFF"
+                                    alt="01（オーワン）初回限定トライアルキャンペーン：眉毛パーマ×毛穴洗浄 通常9,000円→初回8,000円、眉毛ワックス×毛穴洗浄 通常8,000円→初回7,000円。1,000円OFF"
                                     width={595}
                                     height={842}
                                     className="rounded-lg overflow-hidden shadow-lg block"

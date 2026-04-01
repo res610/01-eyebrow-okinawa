@@ -21,8 +21,8 @@ const siteUrl = isDev
 fs.writeFileSync(
     path.join(__dirname, 'public', 'manifest.webmanifest'),
     JSON.stringify({
-        name: '01（O-ONE）メンズ眉毛サロン',
-        short_name: '01 O-ONE',
+        name: '01（オーワン）メンズ眉毛サロン',
+        short_name: '01 オーワン',
         description: '沖縄県那覇市おもろまちのメンズ専門眉毛ワックスサロン',
         start_url: `${basePath}/`,
         display: 'standalone',

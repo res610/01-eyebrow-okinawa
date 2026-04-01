@@ -83,7 +83,7 @@ export default function Home() {
                                 <div className="rounded-lg overflow-hidden shadow-lg">
                                     <Image
                                         src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/before-after-real.webp`}
-                                        alt="沖縄・那覇メンズ眉毛サロン01（O-ONE）の眉毛ワックス施術イメージ：施術前と施術後のビフォーアフター比較。骨格に合わせて眉を整え、清潔感のある印象に"
+                                        alt="沖縄・那覇メンズ眉毛サロン01（オーワン）の眉毛ワックス施術イメージ：施術前と施術後のビフォーアフター比較。骨格に合わせて眉を整え、清潔感のある印象に"
                                         width={800}
                                         height={1200}
                                         className="w-full"
@@ -99,7 +99,7 @@ export default function Home() {
                                 <div className="rounded-lg overflow-hidden shadow-lg">
                                     <Image
                                         src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/before-after-perm.webp`}
-                                        alt="沖縄・那覇メンズ眉毛サロン01（O-ONE）の眉毛パーマ施術イメージ：施術前と施術後のビフォーアフター比較。毛流れを整え、自然で立体的な眉に"
+                                        alt="沖縄・那覇メンズ眉毛サロン01（オーワン）の眉毛パーマ施術イメージ：施術前と施術後のビフォーアフター比較。毛流れを整え、自然で立体的な眉に"
                                         width={800}
                                         height={1200}
                                         className="w-full"
@@ -323,7 +323,7 @@ export default function Home() {
                         <div className="rounded-lg overflow-hidden shadow-lg">
                             <LazyGoogleMap />
                             <div className="bg-gray-900 text-white p-4">
-                                <p className="text-sm md:text-base font-bold mb-2">01（O-ONE）メンズ眉毛サロン</p>
+                                <p className="text-sm md:text-base font-bold mb-2">01（オーワン）メンズ眉毛サロン</p>
                                 <p className="text-xs md:text-sm text-gray-300 leading-relaxed">
                                     〒900-0006<br />
                                     沖縄県那覇市おもろまち4-6-19<br />

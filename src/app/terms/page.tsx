@@ -5,7 +5,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: '利用規約',
-    description: '沖縄・那覇のメンズ眉毛サロン01（O-ONE）の利用規約。サービスのご利用条件、キャンセルポリシー、個人情報の取り扱いについてご案内します。',
+    description: '沖縄・那覇のメンズ眉毛サロン01（オーワン）の利用規約。サービスのご利用条件、キャンセルポリシー、個人情報の取り扱いについてご案内します。',
     alternates: {
         canonical: '/terms/',
     },

@@ -14,7 +14,7 @@ export default function Header() {
                     <Link href="/" className="flex items-center">
                         <Image
                             src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/title.webp`}
-                            alt="01（O-ONE）"
+                            alt="01（オーワン）"
                             width={200}
                             height={50}
                             className="h-10 md:h-12 w-auto"

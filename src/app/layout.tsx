@@ -9,10 +9,10 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
 
 export const metadata: Metadata = {
     title: {
-        default: "メンズ眉毛サロン 01（O-ONE）| 沖縄・那覇おもろまち",
-        template: "%s | 01（O-ONE）沖縄メンズ眉毛サロン",
+        default: "メンズ眉毛サロン 01（オーワン）| 沖縄・那覇おもろまち",
+        template: "%s | 01（オーワン）沖縄メンズ眉毛サロン",
     },
-    description: "沖縄県那覇市おもろまちのメンズ専門眉毛ワックスサロン「01（O-ONE）」。完全個室で眉毛ワックス・眉毛パーマの施術。男性の眉毛を骨格に合わせて美しく整えます。沖縄・那覇で眉毛サロンをお探しの方はぜひ。",
+    description: "沖縄県那覇市おもろまちのメンズ専門眉毛ワックスサロン「01（オーワン）」。完全個室で眉毛ワックス・眉毛パーマの施術。男性の眉毛を骨格に合わせて美しく整えます。沖縄・那覇で眉毛サロンをお探しの方はぜひ。",
     keywords: [
         "沖縄 眉毛",
         "那覇 眉毛",
@@ -24,11 +24,11 @@ export const metadata: Metadata = {
         "メンズ眉毛サロン",
         "眉毛パーマ メンズ 沖縄",
         "おもろまち 眉毛",
-        "01 O-ONE",
+        "01 オーワン",
     ],
-    authors: [{ name: "01（O-ONE）" }],
-    creator: "01（O-ONE）",
-    publisher: "01（O-ONE）",
+    authors: [{ name: "01（オーワン）" }],
+    creator: "01（オーワン）",
+    publisher: "01（オーワン）",
     formatDetection: {
         email: false,
         address: false,
@@ -39,10 +39,10 @@ export const metadata: Metadata = {
         canonical: "/",
     },
     openGraph: {
-        title: "メンズ眉毛サロン 01（O-ONE）| 沖縄・那覇おもろまち",
+        title: "メンズ眉毛サロン 01（オーワン）| 沖縄・那覇おもろまち",
         description: "沖縄県那覇市おもろまちのメンズ専門眉毛ワックスサロン。完全個室で眉毛ワックス・眉毛パーマの施術。男性の眉毛を骨格に合わせて美しく整えます。",
         url: siteUrl,
-        siteName: "01（O-ONE）メンズ眉毛サロン",
+        siteName: "01（オーワン）メンズ眉毛サロン",
         locale: "ja_JP",
         type: "website",
         images: [
@@ -50,13 +50,13 @@ export const metadata: Metadata = {
                 url: `${siteUrl}/images/og-image.png`,
                 width: 1200,
                 height: 630,
-                alt: "01（O-ONE）メンズ眉毛サロン 沖縄・那覇おもろまち",
+                alt: "01（オーワン）メンズ眉毛サロン 沖縄・那覇おもろまち",
             },
         ],
     },
     twitter: {
         card: "summary_large_image",
-        title: "メンズ眉毛サロン 01（O-ONE）| 沖縄・那覇おもろまち",
+        title: "メンズ眉毛サロン 01（オーワン）| 沖縄・那覇おもろまち",
         description: "沖縄県那覇市おもろまちのメンズ専門眉毛ワックスサロン。完全個室で眉毛ワックス・眉毛パーマの施術。",
         images: [`${siteUrl}/images/og-image.png`],
     },
@@ -91,7 +91,7 @@ export const metadata: Metadata = {
 const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BeautySalon",
-    name: "01（O-ONE）",
+    name: "01（オーワン）",
     alternateName: ["オーワン", "メンズ眉毛専門店 01(オーワン)"],
     description: "沖縄県那覇市おもろまちのメンズ専門眉毛ワックスサロン。完全個室で眉毛ワックス・眉毛パーマの施術を行っています。",
     url: siteUrl,

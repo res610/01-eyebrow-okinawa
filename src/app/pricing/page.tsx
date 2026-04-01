@@ -4,14 +4,14 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: '料金表・メニュー',
-    description: '沖縄・那覇のメンズ眉毛サロン01（O-ONE）の料金表。眉毛ワックス・眉毛パーマ・鼻毛ワックスなど、メンズ向け眉毛メニューの料金をご案内。完全個室のプライベート空間で施術。',
+    description: '沖縄・那覇のメンズ眉毛サロン01（オーワン）の料金表。眉毛ワックス・眉毛パーマ・鼻毛ワックスなど、メンズ向け眉毛メニューの料金をご案内。完全個室のプライベート空間で施術。',
     keywords: ['眉毛ワックス 料金 沖縄', 'メンズ眉毛 料金 那覇', '眉毛パーマ 料金', '眉毛サロン 料金表'],
     alternates: {
         canonical: '/pricing/',
     },
     openGraph: {
-        title: '料金表・メニュー | 01（O-ONE）沖縄メンズ眉毛サロン',
-        description: '沖縄・那覇のメンズ眉毛サロン01（O-ONE）の料金表。眉毛ワックス・眉毛パーマの料金をご案内。',
+        title: '料金表・メニュー | 01（オーワン）沖縄メンズ眉毛サロン',
+        description: '沖縄・那覇のメンズ眉毛サロン01（オーワン）の料金表。眉毛ワックス・眉毛パーマの料金をご案内。',
     },
 };
 
@@ -20,7 +20,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://01-oone.com";
 const serviceJsonLd = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "01（O-ONE）メンズ眉毛サービス料金表",
+    name: "01（オーワン）メンズ眉毛サービス料金表",
     itemListElement: [
         {
             "@type": "ListItem",
@@ -29,7 +29,7 @@ const serviceJsonLd = {
                 "@type": "Service",
                 name: "眉毛＋毛穴ケア〈ワックス〉",
                 description: "眉毛を整えながら、鼻まわりの毛穴汚れも一緒にケアできるセットメニュー。清潔感・肌印象を同時に整えたい方におすすめ。",
-                provider: { "@type": "BeautySalon", name: "01（O-ONE）" },
+                provider: { "@type": "BeautySalon", name: "01（オーワン）" },
                 areaServed: { "@type": "City", name: "那覇市" },
                 offers: {
                     "@type": "Offer",
@@ -46,7 +46,7 @@ const serviceJsonLd = {
                 "@type": "Service",
                 name: "眉毛＋毛穴ケア〈パーマ〉",
                 description: "眉毛パーマ（ワックス込み）と毛穴ケアを組み合わせたセットメニュー。眉の形・毛流れ・肌印象までまとめて整えたい方におすすめ。",
-                provider: { "@type": "BeautySalon", name: "01（O-ONE）" },
+                provider: { "@type": "BeautySalon", name: "01（オーワン）" },
                 areaServed: { "@type": "City", name: "那覇市" },
                 offers: {
                     "@type": "Offer",
@@ -63,7 +63,7 @@ const serviceJsonLd = {
                 "@type": "Service",
                 name: "眉毛デザイン〈ワックス〉",
                 description: "眉周りのムダ毛をワックスで整え、骨格に合わせて清潔感のある眉に仕上げます。",
-                provider: { "@type": "BeautySalon", name: "01（O-ONE）" },
+                provider: { "@type": "BeautySalon", name: "01（オーワン）" },
                 areaServed: { "@type": "City", name: "那覇市" },
                 offers: {
                     "@type": "Offer",
@@ -80,7 +80,7 @@ const serviceJsonLd = {
                 "@type": "Service",
                 name: "眉毛デザイン〈パーマ〉",
                 description: "眉毛の生えグセを整えるパーマ施術。ワックス処理込みで、毎日のスタイリングが楽になります。",
-                provider: { "@type": "BeautySalon", name: "01（O-ONE）" },
+                provider: { "@type": "BeautySalon", name: "01（オーワン）" },
                 areaServed: { "@type": "City", name: "那覇市" },
                 offers: {
                     "@type": "Offer",
@@ -128,7 +128,7 @@ export default function PricingPage() {
                 <div className="max-w-4xl mx-auto px-4 py-12 md:py-16">
                     <h1 className="text-3xl md:text-4xl font-bold text-center mb-4 md:mb-6 text-brand">料金表・メニュー</h1>
                     <p className="text-sm md:text-base text-gray-600 text-center mb-8 md:mb-12 leading-relaxed">
-                        沖縄・那覇のメンズ眉毛サロン01（O-ONE）の施術メニューと料金のご案内です。<br className="hidden md:inline" />
+                        沖縄・那覇のメンズ眉毛サロン01（オーワン）の施術メニューと料金のご案内です。<br className="hidden md:inline" />
                         眉毛ワックス・眉毛パーマをはじめ、鼻毛ワックスや毛穴洗浄などのオプションメニューもご用意しています。
                     </p>
 
