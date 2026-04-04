@@ -4,6 +4,7 @@ import HeroCarousel from '@/components/HeroCarousel';
 import CustomerVoices from '@/components/CustomerVoices';
 import LazyGoogleMap from '@/components/LazyGoogleMap';
 import InstagramFeed from '@/components/InstagramFeed';
+import ImageModal from '@/components/ImageModal';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -282,6 +283,15 @@ export default function Home() {
                                             <p className="font-bold">🚗【縦列駐車の注意】</p>
                                             <p>駐車された方は、駐車スペース付近の柱にあるホワイトボードへ「401」とご記入ください。<br />
                                             <span className="text-red-600 font-bold">※車両移動のご連絡に必要となります。</span></p>
+                                            <ImageModal
+                                                src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/whiteboard.webp`}
+                                                alt="駐車場のホワイトボード"
+                                                width={1200}
+                                                height={900}
+                                                className="inline-flex items-center gap-1 mt-2 text-sm text-brand hover:text-brand-light underline"
+                                            >
+                                                <span>📋 ホワイトボードの写真を見る</span>
+                                            </ImageModal>
                                         </div>
                                     </div>
                                 </div>

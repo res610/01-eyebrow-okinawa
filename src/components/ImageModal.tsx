@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useState, useCallback, ReactNode } from 'react';
 import Image from 'next/image';
 
 interface ImageModalProps {
@@ -9,9 +9,10 @@ interface ImageModalProps {
     width: number;
     height: number;
     className?: string;
+    children?: ReactNode;
 }
 
-export default function ImageModal({ src, alt, width, height, className }: ImageModalProps) {
+export default function ImageModal({ src, alt, width, height, className, children }: ImageModalProps) {
     const [isOpen, setIsOpen] = useState(false);
 
     const openModal = useCallback(() => setIsOpen(true), []);
@@ -25,13 +26,15 @@ export default function ImageModal({ src, alt, width, height, className }: Image
                 className={`cursor-pointer ${className ?? ''}`}
                 aria-label={`${alt}を拡大表示`}
             >
-                <Image
-                    src={src}
-                    alt={alt}
-                    width={width}
-                    height={height}
-                    className="w-full h-full object-cover"
-                />
+                {children ?? (
+                    <Image
+                        src={src}
+                        alt={alt}
+                        width={width}
+                        height={height}
+                        className="w-full h-full object-cover"
+                    />
+                )}
             </button>
 
             {isOpen && (
