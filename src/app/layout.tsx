@@ -168,6 +168,10 @@ export default function RootLayout({
     return (
         <html lang="ja">
             <head>
+                <meta
+                    httpEquiv="Content-Security-Policy"
+                    content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.googletagmanager.com https://www.google-analytics.com; frame-src https://www.google.com; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
+                />
                 {gaId && (
                     <>
                         <script async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} />
