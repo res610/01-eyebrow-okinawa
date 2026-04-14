@@ -277,8 +277,22 @@ export default function Home() {
                                 <div className="p-6">
                                     <h3 className="text-xl md:text-2xl font-bold text-center mb-4 pb-2 border-b-2 border-gray-800">店舗外観</h3>
                                     <div className="text-sm md:text-base text-gray-700 leading-relaxed space-y-3">
-                                        <p>こちらの写真の建物が目印です。<br />駐車場は建物右端（自動販売機側）に縦列駐車2台分ございます🚗</p>
-                                        <p className="text-gray-600 text-sm">※共有駐車場のため、満車の場合は近隣パーキングをご利用ください<br />（駐車料金はお客様ご負担となります）</p>
+                                        <p>こちらの写真の建物が目印です。<br />駐車場は建物右端（自動販売機側）にございます🚗</p>
+                                        <div className="bg-green-50 border border-green-200 p-3 rounded">
+                                            <p className="font-bold text-green-800">🟢【駐車場のご案内】</p>
+                                            <p><span className="font-bold text-green-700">緑色のゾーン</span>が当店の駐車スペースです。<br />
+                                            縦列駐車で2台分ございますので、<span className="font-bold">緑色のエリア内</span>にお停めください。</p>
+                                            <p className="text-sm text-blue-700 mt-1">※<span className="font-bold">青色のゾーンは隣の美容室の駐車場</span>です。お停めにならないようご注意ください。</p>
+                                            <ImageModal
+                                                src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/parking.webp`}
+                                                alt="駐車場案内 - 緑色ゾーンが01の駐車スペース"
+                                                width={1108}
+                                                height={1478}
+                                                className="inline-flex items-center gap-1 mt-2 text-sm text-brand hover:text-brand-light underline"
+                                            >
+                                                <span>📷 駐車場の写真を見る</span>
+                                            </ImageModal>
+                                        </div>
                                         <div className="bg-gray-50 p-3 rounded">
                                             <p className="font-bold">🚗【縦列駐車の注意】</p>
                                             <p>駐車された方は、駐車スペース付近の柱にあるホワイトボードへ「401」とご記入ください。<br />
@@ -293,6 +307,7 @@ export default function Home() {
                                                 <span>📋 ホワイトボードの写真を見る</span>
                                             </ImageModal>
                                         </div>
+                                        <p className="text-gray-600 text-sm">※共有駐車場のため、満車の場合は近隣パーキングをご利用ください<br />（駐車料金はお客様ご負担となります）</p>
                                     </div>
                                 </div>
                             </div>
