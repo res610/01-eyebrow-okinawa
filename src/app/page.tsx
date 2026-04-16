@@ -262,7 +262,7 @@ export default function Home() {
                             <p className="text-sm tracking-widest text-brand-light">SALON LIST</p>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {/* 店舗外観 */}
                             <div className="bg-white rounded-lg shadow-md overflow-hidden">
                                 <div className="relative w-full h-64">
@@ -271,13 +271,34 @@ export default function Home() {
                                         alt="沖縄那覇おもろまちのメンズ眉毛サロン01の店舗外観"
                                         fill
                                         className="object-cover"
-                                        sizes="(max-width: 768px) 100vw, 50vw"
+                                        sizes="(max-width: 768px) 100vw, 33vw"
                                     />
                                 </div>
                                 <div className="p-6">
                                     <h3 className="text-xl md:text-2xl font-bold text-center mb-4 pb-2 border-b-2 border-gray-800">店舗外観</h3>
                                     <div className="text-sm md:text-base text-gray-700 leading-relaxed space-y-3">
-                                        <p>こちらの写真の建物が目印です。<br />駐車場は建物右端（自動販売機側）にございます🚗</p>
+                                        <p>こちらの写真の建物が目印です。</p>
+                                        <p>フレックスおもろまち4階（401号室）が当店です。建物入口のエレベーターで4階までお越しください。</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* 駐車場案内 */}
+                            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+                                <div className="relative w-full h-64">
+                                    <Image
+                                        src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/parking.webp`}
+                                        alt="駐車場案内 - 緑色ゾーンが01の駐車スペース"
+                                        fill
+                                        className="object-cover"
+                                        sizes="(max-width: 768px) 100vw, 33vw"
+                                    />
+                                </div>
+                                <div className="p-6">
+                                    <h3 className="text-xl md:text-2xl font-bold text-center mb-4 pb-2 border-b-2 border-gray-800">駐車場案内</h3>
+                                    <div className="text-sm md:text-base text-gray-700 leading-relaxed space-y-3">
+                                        <p>駐車場は建物右端（自動販売機側）にございます🚗</p>
+                                        <p className="text-gray-600 text-sm">※共有駐車場のため、満車の場合は近隣パーキングをご利用ください<br />（駐車料金はお客様ご負担となります）</p>
                                         <div className="bg-green-50 border border-green-200 p-3 rounded">
                                             <p className="font-bold text-green-800">🟢【駐車場のご案内】</p>
                                             <p><span className="font-bold text-green-700">緑色のゾーン</span>が当店の駐車スペースです。<br />
@@ -290,7 +311,7 @@ export default function Home() {
                                                 height={1478}
                                                 className="inline-flex items-center gap-1 mt-2 text-sm text-brand hover:text-brand-light underline"
                                             >
-                                                <span>📷 駐車場の写真を見る</span>
+                                                <span>📷 駐車場の写真を拡大</span>
                                             </ImageModal>
                                         </div>
                                         <div className="bg-gray-50 p-3 rounded">
@@ -307,7 +328,6 @@ export default function Home() {
                                                 <span>📋 ホワイトボードの写真を見る</span>
                                             </ImageModal>
                                         </div>
-                                        <p className="text-gray-600 text-sm">※共有駐車場のため、満車の場合は近隣パーキングをご利用ください<br />（駐車料金はお客様ご負担となります）</p>
                                     </div>
                                 </div>
                             </div>
@@ -320,7 +340,7 @@ export default function Home() {
                                         alt="01の完全個室施術スペース・リクライニングチェア完備"
                                         fill
                                         className="object-cover"
-                                        sizes="(max-width: 768px) 100vw, 50vw"
+                                        sizes="(max-width: 768px) 100vw, 33vw"
                                     />
                                 </div>
                                 <div className="p-6">
